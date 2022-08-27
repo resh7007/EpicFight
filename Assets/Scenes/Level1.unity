@@ -495,6 +495,50 @@ Transform:
   m_Father: {fileID: 1696635070}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &858412254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858412256}
+  - component: {fileID: 858412255}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &858412255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858412254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7a33fcfd95a4fcf928d13ef641d188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 1520914867}
+--- !u!4 &858412256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858412254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2712781, y: -0.19549063, z: -6.183178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890294746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,6 +2093,7 @@ GameObject:
   - component: {fileID: 1520914866}
   - component: {fileID: 1520914870}
   - component: {fileID: 1520914867}
+  - component: {fileID: 1520914871}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Untagged
@@ -2084,6 +2129,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WalkSpeed: 0.01
   IsJumping: 0
+  _canWalkRight: 1
+  _canWalkLeft: 1
+  Player1: {fileID: 1305787806}
+  Opponent: {fileID: 1168976710}
+  OppPosition: {x: 0, y: 0, z: 0}
 --- !u!33 &1520914868
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2123,6 +2173,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &1520914871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520914865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0dba367a95246349f3552fda4a8b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1533065230
 GameObject:
   m_ObjectHideFlags: 0
