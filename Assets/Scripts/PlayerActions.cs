@@ -11,7 +11,16 @@ public class PlayerActions : MonoBehaviour
   
     public void JumpUp()
     {
-        Player1.transform.Translate(0,JumpSpeed  ,0);
-
+        Player1.transform.Translate(0,JumpSpeed,0);
+    }
+    public void FlipUp()
+    {
+        Player1.transform.Translate(0,JumpSpeed,0);
+        Player1.transform.Translate(0.01f,0,0);
+    }
+    public void FlipBack()
+    {
+        Player1.transform.Translate(0,JumpSpeed,0);
+        Player1.transform.Translate(-0.01f,0,0);
     }
 }

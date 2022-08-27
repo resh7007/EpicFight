@@ -89,17 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-    // IEnumerator LeftIsTrue()
-    // {
-    //     yield return new WaitForSeconds(.15f);
-    //     transform.Rotate(0,-180,0);
-    // }
-    // IEnumerator RightIsTrue()
-    // {
-    //     yield return new WaitForSeconds(.15f);
-    //     transform.Rotate(0,180,0);
-    // }
-
+   
     void WalkingLeftRight()
     {
         if (animatorStateInfo.IsTag("Motion"))
