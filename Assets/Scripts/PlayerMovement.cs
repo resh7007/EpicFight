@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
             FacingRight = true;
             yield return new WaitForSeconds(.15f);
             Player1.transform.Rotate(0, -180, 0);
+            Anim.SetLayerWeight(1, 0);
         }
     }
     IEnumerator FaceRight()
@@ -84,6 +85,8 @@ public class PlayerMovement : MonoBehaviour
             FacingRight = false;
             yield return new WaitForSeconds(.15f);
             Player1.transform.Rotate(0, 180, 0);
+            Anim.SetLayerWeight(1, 1);
+
         }
     }
     // IEnumerator LeftIsTrue()
