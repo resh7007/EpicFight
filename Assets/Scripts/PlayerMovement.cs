@@ -17,8 +17,17 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Opponent;
     private Vector3 OppPosition;
     private bool FacingLeft = false;
-    private bool FacingRight=true;
+    private bool FacingRight = true;
 
+    public bool GetFacingLeft ()
+    {
+        return FacingLeft;
+    }
+    public bool GetFacingRight ()
+    {
+        return FacingRight;
+    }
+ 
     public bool CanWalkRight
     {
         get => _canWalkRight;
@@ -75,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(.15f);
             Player1.transform.Rotate(0, -180, 0);
             Anim.SetLayerWeight(1, 0);
+            
         }
     }
     IEnumerator FaceRight()
@@ -123,12 +133,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetAxis("Vertical")>0 && !IsJumping)
         {
-           
-                Anim.SetTrigger("Jump");
+            Anim.SetTrigger("Jump");
                 IsJumping = true;
                 StartCoroutine(JumpPause());
-          
-
         }
 
         if (Input.GetAxis("Vertical") < 0)

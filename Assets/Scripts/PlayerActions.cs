@@ -11,15 +11,22 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float JumpSpeed;
     [SerializeField] private GameObject Player1;
     private AnimatorStateInfo animatorStateInfo;
-
+    [SerializeField] private bool HeavyMoving = false;
+    [SerializeField] private float PunchSlideAmount =.5f;
+    private PlayerMovement playerMovement;
     void Start()
     {
         Anim = GetComponent<Animator>();
+    }
 
+    public void SetPlayerMovement(PlayerMovement _playerMovement)
+    {
+        playerMovement = _playerMovement;
     }
 
     private void Update()
     {
+        HeavyPunchSlide();
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
         StandingAttacks();
         CrouchingAttack();
@@ -90,4 +97,27 @@ public class PlayerActions : MonoBehaviour
         Player1.transform.Translate(0,JumpSpeed,0);
         Player1.transform.Translate(-0.01f,0,0);
     }
+ 
+    void HeavyPunchSlide()
+    {
+        if (!HeavyMoving) return;
+        
+        if(playerMovement.GetFacingRight())
+            Player1.transform.Translate(PunchSlideAmount*Time.deltaTime,0,0);
+        if(playerMovement.GetFacingLeft())
+            Player1.transform.Translate(-PunchSlideAmount*Time.deltaTime,0,0);
+        
+
+        
+    }
+
+    IEnumerator PunchSlide()
+    {
+        HeavyMoving = true;
+        yield return new WaitForSeconds(.05f);
+        HeavyMoving = false;
+
+    }
+
+
 }

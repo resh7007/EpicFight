@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         FindObjectOfType<ScreenBounds>().SetPlayerMovement(playerMovement);
+        FindObjectOfType<PlayerActions>().SetPlayerMovement(playerMovement);
     }
  
 }
