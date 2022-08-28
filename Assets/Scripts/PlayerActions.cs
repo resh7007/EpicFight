@@ -58,6 +58,20 @@ public class PlayerActions : MonoBehaviour
             {
                 Anim.SetTrigger("HeavyKick");
             }
+
+            if (Input.GetButtonDown("Block"))
+            {
+                Anim.SetTrigger("BlockOn");
+            }
+        }
+
+        if (animatorStateInfo.IsTag("Block"))
+        {
+            if (Input.GetButtonUp("Block"))
+            {
+                Anim.SetTrigger("BlockOff");
+            }
+
         }
     }
 
