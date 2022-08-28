@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Back/Ch14_nonPBR@Center Block (1).fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Back/Ch14_nonPBR@Center Block (1).fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Ch14_nonPBR@Center Block.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Ch14_nonPBR@Center Block.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Mouse.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Mouse.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

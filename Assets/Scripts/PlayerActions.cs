@@ -14,9 +14,14 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private bool HeavyMoving = false;
     [SerializeField] private float PunchSlideAmount =.5f;
     private PlayerMovement playerMovement;
+    private AudioSource MyPlayer;
+    public AudioClip PunchWoosh;
+    public AudioClip KickWoosh;
+
     void Start()
     {
         Anim = GetComponent<Animator>();
+        MyPlayer = GetComponent<AudioSource>();
     }
 
     public void SetPlayerMovement(PlayerMovement _playerMovement)
@@ -121,8 +126,6 @@ public class PlayerActions : MonoBehaviour
         if(playerMovement.GetFacingLeft())
             Player1.transform.Translate(-PunchSlideAmount*Time.deltaTime,0,0);
         
-
-        
     }
 
     IEnumerator PunchSlide()
@@ -130,8 +133,18 @@ public class PlayerActions : MonoBehaviour
         HeavyMoving = true;
         yield return new WaitForSeconds(.05f);
         HeavyMoving = false;
-
     }
 
+    public void PunchWooshSound()
+    {
+        MyPlayer.clip = PunchWoosh;
+        MyPlayer.Play();
+    }
+    
+    public void KickWooshSound()
+    {
+        MyPlayer.clip = KickWoosh;
+        MyPlayer.Play();
+    }
 
 }
