@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Running Forward Flip 1.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Running Forward Flip 1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Back/Ch14_nonPBR@Mma Kick (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Back/Ch14_nonPBR@Mma Kick (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Ch14_nonPBR@Mma Kick.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Ch14_nonPBR@Mma Kick.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Ch14_nonPBR@Mma Kick.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Ch14_nonPBR@Mma Kick.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Mouse.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Mouse.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1661576461145</updated>
       <workItem from="1661576463891" duration="269000" />
-      <workItem from="1661589659877" duration="8021000" />
+      <workItem from="1661589659877" duration="8276000" />
+      <workItem from="1661682308367" duration="2089000" />
     </task>
     <servers />
   </component>
