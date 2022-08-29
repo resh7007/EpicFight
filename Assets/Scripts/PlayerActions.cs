@@ -6,6 +6,8 @@ public class PlayerActions : MonoBehaviour
 {
 
     [SerializeField] private float JumpSpeed;
+    [SerializeField] private float FlipSpeed=.3f;
+
     private GameObject Player1;
     [SerializeField] private bool HeavyMoving = false;
     [SerializeField] private float PunchSlideAmount =.5f;
@@ -34,13 +36,11 @@ public class PlayerActions : MonoBehaviour
     }
     public void FlipUp()
     {
-        Player1.transform.Translate(0,JumpSpeed,0);
-        Player1.transform.Translate(0.01f,0,0);
+        Player1.transform.Translate(0,FlipSpeed,0); 
     }
     public void FlipBack()
     {
-        Player1.transform.Translate(0,JumpSpeed,0);
-        Player1.transform.Translate(-0.01f,0,0);
+        Player1.transform.Translate(0,FlipSpeed,0); 
     }
  
     void HeavyPunchSlide()
