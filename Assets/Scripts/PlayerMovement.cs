@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Animator Anim;
+    [SerializeField] private Animator Anim;
 
     [SerializeField] private float WalkSpeed;
     [SerializeField] private bool IsJumping;
@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 OppPosition;
     private bool FacingLeft = false;
     private bool FacingRight = true;
+
+    public Animator GetAnim()
+    {
+        return Anim;
+    }
 
     public bool GetFacingLeft ()
     {
@@ -38,12 +43,6 @@ public class PlayerMovement : MonoBehaviour
     {
         get => _canWalkLeft;
         set => _canWalkLeft = value;
-    }
-
-    void Start()
-    {
-        Anim = GetComponentInChildren<Animator>();
-        
     }
  
     void Update()

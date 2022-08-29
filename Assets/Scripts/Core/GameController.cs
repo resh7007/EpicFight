@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     {
         FindObjectOfType<ScreenBounds>().SetPlayerMovement(playerMovement);
         FindObjectOfType<PlayerActions>().SetPlayerMovement(playerMovement);
+        FindObjectOfType<React>().SetPlayerMovement(playerMovement);
+
     }
  
 }

@@ -6,7 +6,48 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Dwarf Walk M.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Dwarf Walk M.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Fighting Idle Mirrored.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Fighting Idle Mirrored.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Jumping M.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Jumping M.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Male Crouch Pose M.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Ch14_nonPBR@Male Crouch Pose M.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Jumping M.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Back/Jumping M.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Dwarf Walk.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Dwarf Walk.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Diffuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Diffuse.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Glossiness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Glossiness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Specular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbm/Ch14_1001_Specular.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Fighting Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Jumping.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Jumping.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Male Crouch Pose.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Ch14_nonPBR@Male Crouch Pose.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Jumping.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Jumping.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Materials/Ch14_1001_Diffuse.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Materials/Ch14_1001_Diffuse.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Materials/Ch14_Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Materials/Ch14_Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Mouse.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Forward/Mouse.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/Player1FX.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/Player1FX.mixer" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +120,7 @@
       <workItem from="1661576463891" duration="269000" />
       <workItem from="1661589659877" duration="8276000" />
       <workItem from="1661682308367" duration="2089000" />
+      <workItem from="1661751080671" duration="607000" />
     </task>
     <servers />
   </component>
