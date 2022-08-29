@@ -1,105 +1,31 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
-    private Animator Anim;
 
     [SerializeField] private float JumpSpeed;
-    [SerializeField] private GameObject Player1;
-    private AnimatorStateInfo animatorStateInfo;
+    private GameObject Player1;
     [SerializeField] private bool HeavyMoving = false;
     [SerializeField] private float PunchSlideAmount =.5f;
     private PlayerMovement playerMovement;
     private AudioSource MyPlayer;
  
-
-    void Start()
+    private void Awake()
     {
-        Anim = GetComponent<Animator>();
+        Player1 = transform.parent.gameObject;
+        playerMovement =Player1.GetComponent<PlayerMovement>();
+    }
+    private void Start()
+    { 
         MyPlayer = GetComponent<AudioSource>();
 
     }
-
-    public void SetPlayerMovement(PlayerMovement _playerMovement)
-    {
-        playerMovement = _playerMovement;
-    }
-
     private void Update()
     {
         HeavyPunchSlide();
-        animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
-        StandingAttacks();
-        CrouchingAttack();
-        AerialMoves();
-    }
-
-    private void StandingAttacks()
-    {
-        if (animatorStateInfo.IsTag("Motion"))
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                Anim.SetTrigger("LightPunch");
-
-            }
-
-            if (Input.GetButtonDown("Fire2"))
-            {
-                Anim.SetTrigger("HeavyPunch");
-            }
-
-            if (Input.GetButtonDown("Fire3"))
-            {
-                Anim.SetTrigger("LightKick");
-
-            }
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                Anim.SetTrigger("HeavyKick");
-            }
-
-            if (Input.GetButtonDown("Block"))
-            {
-                Anim.SetTrigger("BlockOn");
-            }
-        }
-
-        if (animatorStateInfo.IsTag("Block"))
-        {
-            if (Input.GetButtonUp("Block"))
-            {
-                Anim.SetTrigger("BlockOff");
-            }
-
-        }
-    }
-
-    private void CrouchingAttack()
-    {
-        if (animatorStateInfo.IsTag("Crouching"))
-        {
-            if (Input.GetButtonDown("Jump"))
-            { 
-                Anim.SetTrigger("HeavyKick");
-            }
-        }
-    }
-
-    private void AerialMoves()
-    {
-        if (animatorStateInfo.IsTag("Jumping"))
-        {
-            if (Input.GetButtonDown("Fire3"))
-            { 
-                Anim.SetTrigger("LightKick");
-            }  
-        }
+ 
     }
 
     public void JumpUp()

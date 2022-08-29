@@ -1,25 +1,27 @@
+using System;
 using UnityEngine;
 
 public class ScreenBounds : MonoBehaviour
 {
-    private PlayerMovement playerMovement;
+    private CharacterInput characterInput;
 
-    public void SetPlayerMovement(PlayerMovement _playerMovement)
+    private void Awake()
     {
-        playerMovement = _playerMovement;
+        characterInput = GetComponent<CharacterInput>();
     }
+
  
     void Update()
     {
-        Vector3 ScreenBounds = Camera.main.WorldToScreenPoint(this.transform.position);
+        Vector3 ScreenBounds = Camera.main.WorldToScreenPoint(transform.position);
         if (ScreenBounds.x > Screen.width)
-            playerMovement.CanWalkRight = false;
+            characterInput.CanWalkRight = false;
         else if (ScreenBounds.x < 0)
-            playerMovement.CanWalkLeft = false;
+            characterInput.CanWalkLeft = false;
         else
         {
-            playerMovement.CanWalkRight = true;
-            playerMovement.CanWalkLeft = true;
+            characterInput.CanWalkRight = true;
+            characterInput.CanWalkLeft = true;
         }
     }
 }

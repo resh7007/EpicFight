@@ -1,17 +1,20 @@
 fileFormatVersion: 2
-guid: 652890f5ec78b4666965fd80b3936cd5
+guid: d9e0b7f1afb7f4f11a2d880b16e90a4a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Idle
+    second: Dizzy Idle (1)
+  - first:
+      74: 6544313393856816519
+    second: Dizzy Idle
   externalObjects: {}
   materials:
-    materialImportMode: 1
-    materialName: 1
+    materialImportMode: 2
+    materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -35,11 +38,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: Dizzy Idle
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 260
+      lastFrame: 256
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

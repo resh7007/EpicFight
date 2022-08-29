@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character2Input.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/MaskedPurpleGuy.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/MaskedPurpleGuy.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Ch43_nonPBR@Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Ch43_nonPBR@Idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Move/Forward/Mouse.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Move/Forward/Mouse.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/React.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/React.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScreenBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScreenBounds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +36,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActionsInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScreenBounds.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,7 +95,9 @@
       <workItem from="1661589659877" duration="8276000" />
       <workItem from="1661682308367" duration="2089000" />
       <workItem from="1661751080671" duration="1784000" />
-      <workItem from="1661753249640" duration="794000" />
+      <workItem from="1661753249640" duration="2430000" />
+      <workItem from="1661759154312" duration="2755000" />
+      <workItem from="1661766299431" duration="1930000" />
     </task>
     <servers />
   </component>

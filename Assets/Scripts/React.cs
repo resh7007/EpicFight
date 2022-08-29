@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class React : MonoBehaviour
@@ -9,12 +6,8 @@ public class React : MonoBehaviour
     private Animator Anim;
     private AudioSource MyPlayer;
 
-    public void SetPlayerMovement(PlayerMovement _playerMovement)
-    {
-        playerMovement = _playerMovement;
-
-    }
-
+    private void Awake()=> playerMovement = GetComponent<PlayerMovement>();
+    
     private void Start()
     {
         Anim = playerMovement.GetAnim();
@@ -47,8 +40,6 @@ public class React : MonoBehaviour
             MyPlayer.clip =  MyPlayer.GetComponent<AudioPlayer>().audioClip[3];
             MyPlayer.Play();
         }
-
-          
 
     }
 }
