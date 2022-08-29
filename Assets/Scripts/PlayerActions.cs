@@ -15,13 +15,13 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float PunchSlideAmount =.5f;
     private PlayerMovement playerMovement;
     private AudioSource MyPlayer;
-    public AudioClip PunchWoosh;
-    public AudioClip KickWoosh;
+ 
 
     void Start()
     {
         Anim = GetComponent<Animator>();
         MyPlayer = GetComponent<AudioSource>();
+
     }
 
     public void SetPlayerMovement(PlayerMovement _playerMovement)
@@ -137,13 +137,13 @@ public class PlayerActions : MonoBehaviour
 
     public void PunchWooshSound()
     {
-        MyPlayer.clip = PunchWoosh;
+        MyPlayer.clip = MyPlayer.GetComponent<AudioPlayer>().audioClip[0];
         MyPlayer.Play();
     }
     
     public void KickWooshSound()
     {
-        MyPlayer.clip = KickWoosh;
+        MyPlayer.clip = MyPlayer.GetComponent<AudioPlayer>().audioClip[1];
         MyPlayer.Play();
     }
 
