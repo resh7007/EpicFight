@@ -8,6 +8,8 @@ TagManager:
   - FistHeavy
   - KickHeavy
   - KickLight
+  - player1
+  - player2
   layers:
   - Default
   - TransparentFX

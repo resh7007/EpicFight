@@ -36,9 +36,9 @@ public class ActionsInput2 : ActionsInput
             }
         }
 
-        if (animatorStateInfo.IsTag("BlockP2"))
+        if (animatorStateInfo.IsTag("Block"))
         {
-            if (Input.GetButtonUp("Block"))
+            if (Input.GetButtonUp("BlockP2"))
             {
                 Anim.SetTrigger("BlockOff");
             }

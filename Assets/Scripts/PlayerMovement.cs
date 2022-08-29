@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Animator Anim;
-    private GameObject Player1;
+    private GameObject PlayerGO;
     public GameObject Opponent;
     private Vector3 OppPosition;
     private bool FacingLeft = false;
@@ -14,8 +14,17 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
-        Player1 = transform.GetChild(0).gameObject;
-        Opponent = GameObject.Find("Cube");
+        PlayerGO = transform.GetChild(0).gameObject;
+        AssignAnOppponent();
+    }
+
+    void AssignAnOppponent()
+    {
+        if(transform.CompareTag("player1"))
+            Opponent = GameObject.FindWithTag("player2");
+        if(transform.CompareTag("player2"))
+            Opponent = GameObject.FindWithTag("player1");
+
     }
 
     public Animator GetAnim()
@@ -47,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
     void FlipToFaceOpponent()
     {
    
-       if (OppPosition.x > Player1.transform.position.x)
+       if (OppPosition.x > PlayerGO.transform.position.x)
        { 
            StartCoroutine(FaceLeft());
        }
-       else if (OppPosition.x < Player1.transform.position.x)
+       else if (OppPosition.x < PlayerGO.transform.position.x)
        { 
            StartCoroutine(FaceRight());
        }
@@ -65,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
             FacingLeft = false;
             FacingRight = true;
             yield return new WaitForSeconds(.15f);
-            Player1.transform.Rotate(0, -180, 0);
+            PlayerGO.transform.Rotate(0, -180, 0);
             Anim.SetLayerWeight(1, 0);
             
         }
@@ -77,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             FacingLeft = true;
             FacingRight = false;
             yield return new WaitForSeconds(.15f);
-            Player1.transform.Rotate(0, 180, 0);
+            PlayerGO.transform.Rotate(0, 180, 0);
             Anim.SetLayerWeight(1, 1);
 
         }
