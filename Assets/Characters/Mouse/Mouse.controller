@@ -67,9 +67,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.6808511
+  m_TransitionDuration: 0.21184741
+  m_TransitionOffset: 0.1525368
+  m_ExitTime: 0.33555523
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -2336,7 +2336,7 @@ AnimatorStateMachine:
     m_Position: {x: 190, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4646651301624255989}
-    m_Position: {x: 730, y: -100, z: 0}
+    m_Position: {x: 790, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2976293151669413966}
     m_Position: {x: 830, y: 180, z: 0}
@@ -3194,7 +3194,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running Forward Flip
-  m_Speed: -1
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3979744900629508455}
@@ -3208,7 +3208,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: b28a7187fbb65478181ea9d9d6ab1e50, type: 3}
+  m_Motion: {fileID: 7400000, guid: 9ae042116a8da4fb28fc1a1aead9efa3, type: 2}
   m_Tag: Motion
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3955,7 +3955,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: fb047e80df2804e8d884d948dd7a5703, type: 3}
+  m_Motion: {fileID: 7400000, guid: 8cbd25037bb954eb99680794f7861dc9, type: 2}
   m_Tag: Motion
   m_SpeedParameter: 
   m_MirrorParameter: 

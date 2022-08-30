@@ -6,7 +6,9 @@ public class PlayerActions : MonoBehaviour
 {
 
     [SerializeField] private float JumpSpeed;
-    [SerializeField] private float FlipSpeed=.3f;
+    [SerializeField] private float FlipHight=.3f;
+    [SerializeField] private float FlipForwardDist=1.3f;
+
 
     private GameObject Player1;
     [SerializeField] private bool HeavyMoving = false;
@@ -34,15 +36,24 @@ public class PlayerActions : MonoBehaviour
     {
         Player1.transform.Translate(0,JumpSpeed,0);
     }
-    public void FlipUp()
+  
+
+    IEnumerator Forward()
     {
-        Player1.transform.Translate(0,FlipSpeed,0); 
-    }
-    public void FlipBack()
-    {
-        Player1.transform.Translate(0,FlipSpeed,0); 
-    }
+        Player1.transform.Translate(0,FlipHight,0);
  
+        yield return new WaitForSeconds(.15f);
+        Player1.transform.Translate(FlipForwardDist,0,0);
+
+    }
+    IEnumerator Backward()
+    {
+        Player1.transform.Translate(0,FlipHight,0);
+       
+         yield return new WaitForSeconds(.15f);
+        Player1.transform.Translate(-FlipForwardDist,0,0);
+
+    }
     void HeavyPunchSlide()
     {
         if (!HeavyMoving) return;

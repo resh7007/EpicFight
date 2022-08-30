@@ -6,11 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     private Animator Anim;
     private GameObject PlayerGO;
-    public GameObject Opponent;
+    private GameObject Opponent;
     private Vector3 OppPosition;
     private bool FacingLeft = false;
     private bool FacingRight = true;
-
+    public int dir;
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
@@ -73,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         {
             FacingLeft = false;
             FacingRight = true;
+            dir = -1;
             yield return new WaitForSeconds(.15f);
             PlayerGO.transform.Rotate(0, -180, 0);
             Anim.SetLayerWeight(1, 0);
@@ -85,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         { 
             FacingLeft = true;
             FacingRight = false;
+            dir = 1;
             yield return new WaitForSeconds(.15f);
             PlayerGO.transform.Rotate(0, 180, 0);
             Anim.SetLayerWeight(1, 1);

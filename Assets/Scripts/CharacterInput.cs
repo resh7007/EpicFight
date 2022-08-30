@@ -42,13 +42,13 @@ public class CharacterInput : MonoBehaviour
                 if (!CanWalkRight) return;
                     
                 Anim.SetBool("Forward",true);
-                transform.Translate(WalkSpeed,0,0);
+                transform.Translate(WalkSpeed *Time.deltaTime,0,0);
             }
             if (Input.GetAxis("Horizontal")<0)
             {
                 if (!CanWalkLeft) return;
                 Anim.SetBool("Backward",true);
-                transform.Translate(-WalkSpeed,0,0);
+                transform.Translate(-WalkSpeed*Time.deltaTime,0,0);
 
             }
         }
@@ -80,7 +80,7 @@ public class CharacterInput : MonoBehaviour
             Anim.SetBool("Crouch",false);
         }
     }
-    public IEnumerator JumpPause()
+    protected IEnumerator JumpPause()
     {
         yield return new WaitForSeconds(1.0f);
         IsJumping = false;
