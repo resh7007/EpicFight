@@ -8,6 +8,7 @@ public class JumpActivator : MonoBehaviour
     private GameObject player;
     private PlayerMovement _playerMovement;
     private string opponentTag;
+    [SerializeField] private float pushStrength = 1.3f;
     private void Awake()
     {
         player = transform.parent.parent.parent.gameObject;
@@ -22,10 +23,10 @@ public class JumpActivator : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(opponentTag))
-        { 
-            Debug.Log("opponentTag="+opponentTag);
-            player.transform.Translate( _playerMovement.dir*.8f,0,0);
+        {  Debug.Log("push "+player.name);
+            player.transform.Translate( _playerMovement.dir*pushStrength,0,0);
         }
     }
- 
+  
+
 }

@@ -272,7 +272,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: e98cc4cee9a114a9b827725ea5e9ca3f, type: 3}
+  m_Motion: {fileID: 7400000, guid: 8a8733948fdf44fb4a65ad79ce79f387, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -526,7 +526,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 93420f52cc1cb4867856a223e127a00a, type: 3}
+  m_Motion: {fileID: 7400000, guid: 8d009e28af38146209d6dcc001605e37, type: 2}
   m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2169,7 +2169,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: f93bfd19c5c6e40168d04895f48f2001, type: 3}
+  m_Motion: {fileID: 7400000, guid: 437e64410484648518b77c5845717446, type: 2}
   m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2830,7 +2830,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: c8ca59d94680e4262a11dda9e007862c, type: 3}
+  m_Motion: {fileID: 7400000, guid: 452bc4ced6b9a450799af3fc37d00f55, type: 2}
   m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2932,7 +2932,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1540279636570602985, guid: 77d7741609d9848b2a6f75ddef758fe7, type: 3}
+  m_Motion: {fileID: 7400000, guid: 2330afed6f711477e866ef4450417cfc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -3807,7 +3807,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 3c0604d0749894313a16a60594d1e0b5, type: 3}
+  m_Motion: {fileID: 7400000, guid: eef62eda8332448e683049a5fc359fd5, type: 2}
   m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 

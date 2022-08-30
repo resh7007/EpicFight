@@ -27,9 +27,7 @@ public class MoveRestrict : MonoBehaviour
             opponentTag2 = "P1Right";
 
         }
-
-        Debug.Log("opponentTag1="+opponentTag1);
-        Debug.Log("opponentTag2="+opponentTag2);
+ 
 
     }
 

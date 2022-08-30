@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ICharacterInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ICharacterInput.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasePlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BasePlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character2Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character2Input.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/JumpActivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JumpActivator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveRestrict.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoveRestrict.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +89,7 @@
       <workItem from="1661759154312" duration="2755000" />
       <workItem from="1661766299431" duration="2265000" />
       <workItem from="1661768892627" duration="5701000" />
-      <workItem from="1661859912646" duration="6996000" />
+      <workItem from="1661859912646" duration="7646000" />
     </task>
     <servers />
   </component>
