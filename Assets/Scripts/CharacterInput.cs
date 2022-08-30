@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterInput : MonoBehaviour
+public class CharacterInput : MonoBehaviour,ICharacterInput
 {
     protected AnimatorStateInfo animatorStateInfo;
     protected Animator Anim;
@@ -11,6 +11,10 @@ public class CharacterInput : MonoBehaviour
     [SerializeField] protected float WalkSpeed=0.03f;
     [SerializeField] protected bool IsJumping;
 
+    
+    [SerializeField] protected bool walkRight = true;
+    [SerializeField] protected bool walkLeft = true;
+    
     public void Awake()
     {
         Anim = GetComponentInChildren<Animator>(); 
@@ -21,6 +25,18 @@ public class CharacterInput : MonoBehaviour
         WalkingLeftRight();
         JumpingCrouching();
     }
+    public void SetWalkRight (bool value)
+    {
+       
+         walkRight = value;
+    }
+
+    public void SetWalkLeft (bool value)
+    {
+       
+        walkLeft = value;
+    }
+
     public bool CanWalkRight
     {
         get => _canWalkRight;
@@ -34,22 +50,28 @@ public class CharacterInput : MonoBehaviour
     }
 
     protected virtual void WalkingLeftRight()
-    {
+    { 
+
         if (animatorStateInfo.IsTag("Motion"))
         {
             if (Input.GetAxis("Horizontal")>0)
-            {
+            { 
                 if (!CanWalkRight) return;
-                    
-                Anim.SetBool("Forward",true);
-                transform.Translate(WalkSpeed *Time.deltaTime,0,0);
+                if (walkRight)
+                {
+                    Anim.SetBool("Forward", true);
+                    transform.Translate(WalkSpeed * Time.deltaTime, 0, 0);
+                }
             }
             if (Input.GetAxis("Horizontal")<0)
             {
+               
                 if (!CanWalkLeft) return;
-                Anim.SetBool("Backward",true);
-                transform.Translate(-WalkSpeed*Time.deltaTime,0,0);
-
+                if (walkLeft)
+                {
+                    Anim.SetBool("Backward", true);
+                    transform.Translate(-WalkSpeed * Time.deltaTime, 0, 0);
+                }
             }
         }
 

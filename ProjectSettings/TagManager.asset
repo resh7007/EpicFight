@@ -12,7 +12,10 @@ TagManager:
   - player2
   - SpaceDetector2
   - SpaceDetector1
-  - SpaceDetector
+  - P1Left
+  - P2Left
+  - P1Right
+  - P2Right
   layers:
   - Default
   - TransparentFX

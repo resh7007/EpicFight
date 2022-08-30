@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class JumpActivator : MonoBehaviour
 {
-    [SerializeField]private GameObject player;
+    private GameObject player;
     private PlayerMovement _playerMovement;
     private string opponentTag;
     private void Awake()
     {
+        player = transform.parent.parent.parent.gameObject;
         _playerMovement=player.GetComponent<PlayerMovement>();
         if (player.transform.CompareTag("player1"))
             opponentTag = "SpaceDetector2";
