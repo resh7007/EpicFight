@@ -1994,7 +1994,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mouse
+  m_Name: Mouse 1
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Forward
@@ -2592,9 +2592,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.30378795
-  m_TransitionOffset: 0.17188257
-  m_ExitTime: 0.8491209
+  m_TransitionDuration: 0.303788
+  m_TransitionOffset: 0
+  m_ExitTime: 0.69136566
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -4050,9 +4050,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.2763685
-  m_TransitionOffset: 0.09003373
-  m_ExitTime: 0.87165743
+  m_TransitionDuration: 0.303788
+  m_TransitionOffset: 0
+  m_ExitTime: 0.69136566
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

@@ -8,13 +8,14 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float JumpSpeed;
     [SerializeField] private float FlipHight=.3f;
     [SerializeField] private float FlipForwardDist=1.3f;
-
-
-    private GameObject Player1;
     [SerializeField] private bool HeavyMoving = false;
     [SerializeField] private float PunchSlideAmount =.5f;
+    private GameObject Player1;
     private PlayerMovement playerMovement;
     private AudioSource MyPlayer;
+    
+    [SerializeField] private float HeavyReactAmount = 3f;
+    private bool HeavyReact = false;
     private void Awake()
     {
         Player1 = transform.parent.gameObject;
@@ -28,7 +29,7 @@ public class PlayerActions : MonoBehaviour
     private void Update()
     {
         HeavyPunchSlide();
- 
+        HeavyReactionSlide();
     }
 
     public void JumpUp()
@@ -40,7 +41,6 @@ public class PlayerActions : MonoBehaviour
     IEnumerator Forward()
     {
         Player1.transform.Translate(0,FlipHight,0);
- 
         yield return new WaitForSeconds(.15f);
         Player1.transform.Translate(FlipForwardDist,0,0);
 
@@ -70,7 +70,24 @@ public class PlayerActions : MonoBehaviour
         yield return new WaitForSeconds(.05f);
         HeavyMoving = false;
     }
-
+    
+    void HeavyReactionSlide()
+    {
+        if (!HeavyReact) return;
+        
+        if(playerMovement.GetFacingRight())
+            Player1.transform.Translate(-HeavyReactAmount*Time.deltaTime,0,0);
+        if(playerMovement.GetFacingLeft())
+            Player1.transform.Translate(HeavyReactAmount*Time.deltaTime,0,0);
+        
+    }
+    IEnumerator HeavySlide()
+    {
+        HeavyReact = true;
+        yield return new WaitForSeconds(.05f);
+        HeavyReact = false;
+    }
+    
     public void PunchWooshSound()
     {
         MyPlayer.clip = MyPlayer.GetComponent<AudioPlayer>().audioClip[0];
