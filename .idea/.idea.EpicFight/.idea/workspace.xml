@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/Stunned (1).anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/Stunned (1).anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Stunned.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Stunned.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <workItem from="1661766299431" duration="2265000" />
       <workItem from="1661768892627" duration="5701000" />
       <workItem from="1661859912646" duration="7914000" />
-      <workItem from="1661918226093" duration="4719000" />
+      <workItem from="1661918226093" duration="5730000" />
     </task>
     <servers />
   </component>

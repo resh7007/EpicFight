@@ -1,12 +1,11 @@
 using UnityEngine;
 
 public class PlayerTrigger : MonoBehaviour
-{ 
+{
         private Collider _collider;
-
         private ActionsInput _actionsInput;
         private string opponentTag;
-
+        [SerializeField] private float DamageAmount = .1f;
         private void Awake()
         {
                 _actionsInput = transform.root.GetChild(0).GetComponent<ActionsInput>();
@@ -28,6 +27,16 @@ public class PlayerTrigger : MonoBehaviour
                 if (other.gameObject.CompareTag(opponentTag))
                 {
                         _actionsInput.SetHit(true);
+                        DamagePlayer();
                 }
+        }
+
+        void DamagePlayer()
+        {
+                if (transform.root.CompareTag("player1"))
+                        Save.ReducePlayer2Health(DamageAmount);
+                if (transform.root.CompareTag("player2"))
+                        Save.ReducePlayer1Health(DamageAmount);
+
         }
 }
