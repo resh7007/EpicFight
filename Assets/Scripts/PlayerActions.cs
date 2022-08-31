@@ -15,7 +15,6 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float PunchSlideAmount =.5f;
     private PlayerMovement playerMovement;
     private AudioSource MyPlayer;
- 
     private void Awake()
     {
         Player1 = transform.parent.gameObject;

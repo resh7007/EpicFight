@@ -14,7 +14,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     
     [SerializeField] protected bool walkRight = true;
     [SerializeField] protected bool walkLeft = true;
-    
+
     public void Awake()
     {
         Anim = GetComponentInChildren<Animator>(); 

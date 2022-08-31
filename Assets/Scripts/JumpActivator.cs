@@ -23,7 +23,7 @@ public class JumpActivator : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag(opponentTag))
-        {  Debug.Log("push "+player.name);
+        { 
             player.transform.Translate( _playerMovement.dir*pushStrength,0,0);
         }
     }
