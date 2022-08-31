@@ -34,9 +34,19 @@ public class PlayerTrigger : MonoBehaviour
         void DamagePlayer()
         {
                 if (transform.root.CompareTag("player1"))
+                {
                         Save.ReducePlayer2Health(DamageAmount);
+                        if(Save.Player2Timer < 2.0f)
+                                Save.Player2Timer += 2.0f;
+                }
+
                 if (transform.root.CompareTag("player2"))
+                {
                         Save.ReducePlayer1Health(DamageAmount);
+                        if (Save.Player1Timer < 2.0f)
+                                Save.Player1Timer += 2.0f;
+                }
+
 
         }
 }

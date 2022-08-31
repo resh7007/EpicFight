@@ -296,7 +296,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player1GreenHealthBar: {fileID: 1861241968}
+  Player1RedHealthBar: {fileID: 780678050}
   Player2GreenHealthBar: {fileID: 907272888}
+  Player2RedHealthBar: {fileID: 1439315259}
 --- !u!1001 &539751049
 PrefabInstance:
   m_ObjectHideFlags: 0
