@@ -178,6 +178,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &290098794 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8349622972927721177, guid: 2698129f97857473287271930343fe76, type: 3}
+  m_PrefabInstance: {fileID: 539751049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &329138700
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +311,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 160296073, guid: 2698129f97857473287271930343fe76, type: 3}
+      propertyPath: EmitFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021732048, guid: 2698129f97857473287271930343fe76, type: 3}
+      propertyPath: EmitFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211987947, guid: 2698129f97857473287271930343fe76, type: 3}
+      propertyPath: EmitFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715866586, guid: 2698129f97857473287271930343fe76, type: 3}
+      propertyPath: EmitFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016556284008855506, guid: 2698129f97857473287271930343fe76, type: 3}
+      propertyPath: HitParticles
+      value: 
+      objectReference: {fileID: 1578985954}
     - target: {fileID: 5016556284008855510, guid: 2698129f97857473287271930343fe76, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -354,17 +379,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerMouse
       objectReference: {fileID: 0}
-    - target: {fileID: 6451164706636046496, guid: 2698129f97857473287271930343fe76, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6451164706636046496, guid: 2698129f97857473287271930343fe76, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6451164706636046496, guid: 2698129f97857473287271930343fe76, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 3
+    - target: {fileID: 8108654877887490945, guid: 2698129f97857473287271930343fe76, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2698129f97857473287271930343fe76, type: 3}
@@ -1553,6 +1570,11 @@ Transform:
   m_Father: {fileID: 1696635070}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1578985954 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8410351275827116930, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+  m_PrefabInstance: {fileID: 812489592412670913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1607680269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,18 +1946,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3927584099658272907, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
-      propertyPath: m_UseGravity
+    - target: {fileID: 208322546, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: EmitFX
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3927584099658272907, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
-      propertyPath: m_IsKinematic
+    - target: {fileID: 208322546, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: Particles
+      value: 
+      objectReference: {fileID: 290098794}
+    - target: {fileID: 934054115, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: EmitFX
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3927584099658272907, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 3
+    - target: {fileID: 934054115, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: Particles
+      value: 
+      objectReference: {fileID: 290098794}
+    - target: {fileID: 1317583261, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: EmitFX
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1317583261, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: Particles
+      value: 
+      objectReference: {fileID: 290098794}
+    - target: {fileID: 1480737578, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: EmitFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480737578, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: Particles
+      value: 
+      objectReference: {fileID: 290098794}
+    - target: {fileID: 1915713906, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: EmitFX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915713906, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: Particles
+      value: 
+      objectReference: {fileID: 290098794}
+    - target: {fileID: 4825082994890404489, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: HitParticles
+      value: 
+      objectReference: {fileID: 290098794}
     - target: {fileID: 4825082994890404493, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
       propertyPath: m_RootOrder
       value: 4

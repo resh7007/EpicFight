@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &204249782
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &538592623
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &917469823
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1021732044
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +343,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1211987943
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1233017989
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1715866583
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.9
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &310733792172524835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +2642,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4127144517957717964, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127144517957717964, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.37
+      objectReference: {fileID: 0}
     - target: {fileID: 4735867470264178461, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: FlipHight
       value: 2
@@ -2723,6 +2747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5587343668715257882}
     m_Modifications:
+    - target: {fileID: 3787836266237573125, guid: d3b6680c8f9cd426ca7fb4d2bdff0288, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6546008156361346057, guid: d3b6680c8f9cd426ca7fb4d2bdff0288, type: 3}
       propertyPath: m_RootOrder
       value: 3

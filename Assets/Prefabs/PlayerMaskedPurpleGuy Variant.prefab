@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &595942733
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &672929613
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &934054113
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1058916422
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1248854427
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1317583259
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1480737576
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &1915713903
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.9
+  EmitFX: 0
+  Particles: {fileID: 0}
 --- !u!1 &2085905445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,6 +3263,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3401996743162194126}
     m_Modifications:
+    - target: {fileID: 3787836266237573125, guid: d3b6680c8f9cd426ca7fb4d2bdff0288, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6546008156361346057, guid: d3b6680c8f9cd426ca7fb4d2bdff0288, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3398,6 +3420,18 @@ PrefabInstance:
     - target: {fileID: 3096775770736840066, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127144517957717964, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127144517957717964, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127144517957717964, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.667
       objectReference: {fileID: 0}
     - target: {fileID: 4735867470264178461, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: FlipSpeed

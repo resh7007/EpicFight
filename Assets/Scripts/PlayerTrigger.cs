@@ -6,6 +6,8 @@ public class PlayerTrigger : MonoBehaviour
         private ActionsInput _actionsInput;
         private string opponentTag;
         [SerializeField] private float DamageAmount = .1f;
+        [SerializeField] private bool EmitFX = false;
+        private ParticleSystem hitParticles;
         private void Awake()
         {
                 _actionsInput = transform.root.GetChild(0).GetComponent<ActionsInput>();
@@ -14,6 +16,8 @@ public class PlayerTrigger : MonoBehaviour
                         opponentTag = "player2";
                 if (transform.root.CompareTag("player2"))
                         opponentTag = "player1";
+
+                hitParticles = transform.root.GetComponent<PlayerMovement>().GetHitParticle();
         }
 
         private void Update()
@@ -28,7 +32,14 @@ public class PlayerTrigger : MonoBehaviour
                 {
                         _actionsInput.SetHit(true);
                         DamagePlayer();
+                        ShowParticles();
                 }
+        }
+
+        void ShowParticles()
+        {
+                if(!EmitFX) return;
+                hitParticles.Play();
         }
 
         void DamagePlayer()

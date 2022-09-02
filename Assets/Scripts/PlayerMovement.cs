@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private bool FacingLeft = false;
     private bool FacingRight = true;
     public int dir;
+    public ParticleSystem HitParticles;
 
 
     private void Awake()
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         AssignAnOppponent();
     }
 
+    
     void AssignAnOppponent()
     {
         if(transform.CompareTag("player1"))
@@ -27,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
         if(transform.CompareTag("player2"))
             Opponent = GameObject.FindWithTag("player1");
 
+    }
+
+    public ParticleSystem GetHitParticle()
+    {
+        return HitParticles;
     }
 
     public Animator GetAnim()
