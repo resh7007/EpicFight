@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private bool FacingLeft = false;
     private bool FacingRight = true;
     public int dir;
+
+
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();

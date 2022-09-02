@@ -59,8 +59,11 @@ public class PlayerActions : MonoBehaviour
         
         if(playerMovement.GetFacingRight())
             Player1.transform.Translate(PunchSlideAmount*Time.deltaTime,0,0);
+          
+
         if(playerMovement.GetFacingLeft())
-            Player1.transform.Translate(-PunchSlideAmount*Time.deltaTime,0,0);
+            Player1.transform.Translate(-PunchSlideAmount*Time.deltaTime,0,0); 
+
         
     }
 
@@ -76,9 +79,10 @@ public class PlayerActions : MonoBehaviour
         if (!HeavyReact) return;
         
         if(playerMovement.GetFacingRight())
-            Player1.transform.Translate(-HeavyReactAmount*Time.deltaTime,0,0);
+           Player1.transform.Translate(-HeavyReactAmount*Time.deltaTime,0,0); 
         if(playerMovement.GetFacingLeft())
-            Player1.transform.Translate(HeavyReactAmount*Time.deltaTime,0,0);
+           Player1.transform.Translate(HeavyReactAmount*Time.deltaTime,0,0); 
+
         
     }
     IEnumerator HeavySlide()

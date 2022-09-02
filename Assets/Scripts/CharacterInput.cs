@@ -10,14 +10,18 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     [SerializeField] protected bool _canWalkLeft = true;
     [SerializeField] protected float WalkSpeed=0.03f;
     [SerializeField] protected bool IsJumping;
-
-    
     [SerializeField] protected bool walkRight = true;
-    [SerializeField] protected bool walkLeft = true; 
-
+    [SerializeField] protected bool walkLeft = true;
+    private bool isInBlock = false;
+    protected Rigidbody _rb;
+    protected Collider _boxCollider;
+    protected Collider _capsuleCollider;
     public void Awake()
     {
-        Anim = GetComponentInChildren<Animator>(); 
+        Anim = GetComponentInChildren<Animator>();
+        _rb = GetComponent<Rigidbody>();
+        _boxCollider = GetComponent<BoxCollider>();
+        _capsuleCollider = GetComponent<CapsuleCollider>();
     }
     public void Update()
     {
@@ -27,7 +31,11 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
         CheckIfKnockedOut();
     }
 
- 
+    public bool GetIsInBlock()
+    {
+        return isInBlock;
+    }
+
     protected virtual void CheckIfKnockedOut()
     {  
  
@@ -103,6 +111,27 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
             Anim.SetBool("Backward",false);
         }
 
+        CheckIfBlock();
+    }
+
+     protected void CheckIfBlock()
+    {
+        if (animatorStateInfo.IsTag("Block"))
+        { 
+            _rb.isKinematic = true;
+            _boxCollider.enabled = false;
+            _capsuleCollider.enabled = false;
+            isInBlock = true;
+        }
+        else
+        {
+          
+            _boxCollider.enabled = true;
+            _capsuleCollider.enabled = true;
+            _rb.isKinematic = false; 
+            isInBlock = false;
+
+        }
     }
 
     protected virtual void JumpingCrouching()

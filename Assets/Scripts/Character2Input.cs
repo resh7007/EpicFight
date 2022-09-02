@@ -29,14 +29,15 @@ public class Character2Input : CharacterInput,ICharacterInput
             }
         }
 
-    
         if (Input.GetAxis("HorizontalP2")==0)
         {
             Anim.SetBool("Forward",false);
             Anim.SetBool("Backward",false);
         }
+        CheckIfBlock();
 
     }
+  
     protected override void CheckIfKnockedOut()
     {
         if (Save.Player2Health <= 0)
