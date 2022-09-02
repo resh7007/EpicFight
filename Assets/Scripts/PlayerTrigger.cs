@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerTrigger : MonoBehaviour
 {
@@ -6,18 +7,28 @@ public class PlayerTrigger : MonoBehaviour
         private ActionsInput _actionsInput;
         private string opponentTag;
         [SerializeField] private float DamageAmount = .1f;
-        [SerializeField] private bool EmitFX = false;
-        private ParticleSystem hitParticles;
+        [SerializeField] private bool EmitHeavyKickFX = false;
+        [SerializeField] private bool EmitFistFX = false;
+        [SerializeField] private bool EmitLightKickFX = false;
+
+        private ParticleSystem heavyFistParticle;
+        private ParticleSystem heavyKickParticle;
+        private ParticleSystem lightKickParticle;
+
+
         private void Awake()
         {
-                _actionsInput = transform.root.GetChild(0).GetComponent<ActionsInput>();
+                Transform rootObj = transform.root;
+                _actionsInput = rootObj.GetChild(0).GetComponent<ActionsInput>();
                 _collider = GetComponent<BoxCollider>();
                 if (transform.root.CompareTag("player1"))
                         opponentTag = "player2";
                 if (transform.root.CompareTag("player2"))
                         opponentTag = "player1";
 
-                hitParticles = transform.root.GetComponent<PlayerMovement>().GetHitParticle();
+                heavyFistParticle = rootObj.GetComponent<PlayerMovement>().GetHeavyFistParticle();
+                heavyKickParticle = rootObj.GetComponent<PlayerMovement>().GetHeavyKickParticle();
+                lightKickParticle =  rootObj.GetComponent<PlayerMovement>().GetLightFistParticle();
         }
 
         private void Update()
@@ -32,16 +43,28 @@ public class PlayerTrigger : MonoBehaviour
                 {
                         _actionsInput.SetHit(true);
                         DamagePlayer();
-                        ShowParticles();
+                        ShowHeavyKickParticles();
+                        ShowHeavyFistParticles();
+                        ShowLightKickParticles();
                 }
         }
 
-        void ShowParticles()
+        void ShowHeavyKickParticles()
         {
-                if(!EmitFX) return;
-                hitParticles.Play();
+                if(!EmitHeavyKickFX) return;
+                heavyKickParticle.Play();
+                Time.timeScale = .3f;
         }
-
+        void ShowHeavyFistParticles()
+        {
+                if(!EmitFistFX) return;
+                heavyFistParticle.Play();
+        }
+        void ShowLightKickParticles()
+        {
+              //  if(!EmitLightKickFX) return;
+              //  lightKickParticle.Play();
+        }
         void DamagePlayer()
         {
                 if (transform.root.CompareTag("player1"))

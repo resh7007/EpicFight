@@ -95,6 +95,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
 
         if (animatorStateInfo.IsTag("Motion"))
         {
+            ResetTimeSlowMotion();
             if (Input.GetAxis("Horizontal")>0)
             { 
                 if (!CanWalkRight) return;
@@ -126,7 +127,12 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
         CheckIfBlock();
     }
 
-     protected void CheckIfBlock()
+    protected void ResetTimeSlowMotion()
+    {
+         Time.timeScale = 1;
+    }
+
+    protected void CheckIfBlock()
     {
         if (animatorStateInfo.IsTag("Block"))
         { 

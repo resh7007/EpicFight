@@ -67,8 +67,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 0
+  EmitFistFX: 1
 --- !u!1 &204249782
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 0
+  EmitFistFX: 0
 --- !u!1 &538592623
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 0
+  EmitFistFX: 0
 --- !u!1 &917469823
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,8 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 0
+  EmitFistFX: 0
 --- !u!1 &1021732044
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 1
+  EmitFistFX: 0
 --- !u!1 &1211987943
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,8 +412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 0
+  EmitFistFX: 1
 --- !u!1 &1233017989
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,8 +481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 0
+  EmitFistFX: 0
 --- !u!1 &1715866583
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,8 +550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.9
-  EmitFX: 0
-  Particles: {fileID: 0}
+  EmitKickFX: 1
+  EmitFistFX: 0
 --- !u!1 &310733792172524835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,6 +2570,10 @@ PrefabInstance:
       propertyPath: WalkSpeed
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: heavyKickParticle
+      value: 
+      objectReference: {fileID: 4145694451911647571}
     - target: {fileID: 993323223549973955, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Height
       value: 0.25
@@ -2650,6 +2654,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.37
       objectReference: {fileID: 0}
+    - target: {fileID: 4128729497393269342, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_Name
+      value: FistParticle
+      objectReference: {fileID: 0}
     - target: {fileID: 4735867470264178461, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: FlipHight
       value: 2
@@ -2702,6 +2710,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.07
       objectReference: {fileID: 0}
+    - target: {fileID: 8315337851773254730, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_Name
+      value: KickParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317946589979044310, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317946589979044310, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.46
+      objectReference: {fileID: 0}
     - target: {fileID: 8417842486761454655, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_TagString
       value: SpaceDetector1
@@ -2720,6 +2740,11 @@ Transform:
 --- !u!1 &7111017020941938577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3096775770736840066, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+  m_PrefabInstance: {fileID: 5212526697165775379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4145694451911647571 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8205253176128832320, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
   m_PrefabInstance: {fileID: 5212526697165775379}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5016556284008855535 stripped

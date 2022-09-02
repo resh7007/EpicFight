@@ -9,6 +9,8 @@ public class Character2Input : CharacterInput,ICharacterInput
     {
         if (animatorStateInfo.IsTag("Motion"))
         {
+            ResetTimeSlowMotion();
+
             if (Input.GetAxis("HorizontalP2")>0)
             {
                 if (!CanWalkRight) return;

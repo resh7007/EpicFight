@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class PlayerMovement : MonoBehaviour
     private bool FacingLeft = false;
     private bool FacingRight = true;
     public int dir;
-    public ParticleSystem HitParticles;
-
+    public ParticleSystem heavyFistParticle;
+    public ParticleSystem heavyKickParticle;
+    public ParticleSystem lightKickParticle;
 
     private void Awake()
     {
@@ -31,11 +33,19 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public ParticleSystem GetHitParticle()
+    public ParticleSystem GetHeavyFistParticle()
     {
-        return HitParticles;
+        return heavyFistParticle;
     }
-
+    public ParticleSystem GetHeavyKickParticle()
+    {
+        return heavyKickParticle;
+    }
+    public ParticleSystem GetLightFistParticle()
+    {
+        return lightKickParticle;
+    }
+    
     public Animator GetAnim()
     {
         return Anim;
