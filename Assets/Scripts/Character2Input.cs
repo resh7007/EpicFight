@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Character2Input : CharacterInput,ICharacterInput
@@ -43,11 +44,26 @@ public class Character2Input : CharacterInput,ICharacterInput
         if (Save.Player2Health <= 0)
         { 
             transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
-            StartCoroutine(KnockedOut());
+             StartCoroutine(KnockedOut());
+         // StartCoroutine(VictoryCheer());
+
 
         }
+        if (Save.Player1Health <= 0)
+        {
+            StartCoroutine(VictoryCheer());
+            transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
 
+        }
     }
+
+    IEnumerator VictoryCheer()
+    {
+        transform.GetComponent<Character2Input>().enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        Anim.SetTrigger("Victory");
+    }
+
     IEnumerator KnockedOut()
     {
         yield return new WaitForSeconds(.1f);
@@ -55,6 +71,7 @@ public class Character2Input : CharacterInput,ICharacterInput
         transform.GetComponent<Character2Input>().enabled = false;
         GetComponent<React>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
+        
     }
     protected override void JumpingCrouching()
     {

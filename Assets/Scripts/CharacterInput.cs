@@ -44,8 +44,20 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
             transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
             StartCoroutine(KnockedOut());
         }
-    }
 
+        if (Save.Player2Health <= 0)
+        { 
+            StartCoroutine(VictoryCheer());
+            transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
+
+        }
+    }
+    IEnumerator VictoryCheer()
+    {
+        transform.GetComponent<CharacterInput>().enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        Anim.SetTrigger("Victory");
+    }
      IEnumerator KnockedOut()
     {
         yield return new WaitForSeconds(.1f);
