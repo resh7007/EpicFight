@@ -44,8 +44,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        GetOpponentPosition();
+        GetOpponentPosition(); 
     }
+
+
 
     void GetOpponentPosition()
     {

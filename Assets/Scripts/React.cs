@@ -5,7 +5,7 @@ public class React : MonoBehaviour
     private PlayerMovement playerMovement;
     private Animator Anim;
     private AudioSource MyPlayer;
-
+    private bool isKnockedOut = false;
     private void Awake()=> playerMovement = GetComponent<PlayerMovement>();
     
     private void Start()
@@ -16,6 +16,27 @@ public class React : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // if(transform.CompareTag("player1"))
+        // {
+        //     if (Save.Player1Health <= 0 && !isKnockedOut)
+        //     { 
+        //         isKnockedOut = true;
+        //        transform.GetComponent<BoxCollider>().enabled = false;
+        //     }
+        //     
+        // }
+        // else if(transform.CompareTag("player2"))
+        // {
+        //     if (Save.Player2Health <= 0  && !isKnockedOut)
+        //     { 
+        //         Anim.SetTrigger("KnockedOut");
+        //         isKnockedOut = true;
+        //
+        //     }
+        //     
+        // }
+        
+        
         if (other.gameObject.CompareTag("KickLight"))
         {
             Anim.SetTrigger("HeadReact");

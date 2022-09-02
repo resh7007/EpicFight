@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: DamageAmount
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 1715866586, guid: 2698129f97857473287271930343fe76, type: 3}
+      propertyPath: DamageAmount
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 5016556284008855510, guid: 2698129f97857473287271930343fe76, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1943,6 +1947,10 @@ PrefabInstance:
     - target: {fileID: 1248854429, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
       propertyPath: DamageAmount
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915713906, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
+      propertyPath: DamageAmount
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4825082994890404493, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
       propertyPath: m_RootOrder

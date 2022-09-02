@@ -37,7 +37,24 @@ public class Character2Input : CharacterInput,ICharacterInput
         }
 
     }
+    protected override void CheckIfKnockedOut()
+    {
+        if (Save.Player2Health <= 0)
+        { 
+            transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
+            StartCoroutine(KnockedOut());
 
+        }
+
+    }
+    IEnumerator KnockedOut()
+    {
+        yield return new WaitForSeconds(.1f);
+        Anim.SetTrigger("KnockedOut");
+        transform.GetComponent<Character2Input>().enabled = false;
+        GetComponent<React>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+    }
     protected override void JumpingCrouching()
     {
         if (Input.GetAxis("VerticalP2") > 0 && !IsJumping)

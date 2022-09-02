@@ -13,7 +13,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
 
     
     [SerializeField] protected bool walkRight = true;
-    [SerializeField] protected bool walkLeft = true;
+    [SerializeField] protected bool walkLeft = true; 
 
     public void Awake()
     {
@@ -24,16 +24,37 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0); 
         WalkingLeftRight();
         JumpingCrouching();
+        CheckIfKnockedOut();
     }
+
+ 
+    protected virtual void CheckIfKnockedOut()
+    {  
+ 
+        if (Save.Player1Health <= 0)
+        {
+            transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
+            StartCoroutine(KnockedOut());
+        }
+    }
+
+     IEnumerator KnockedOut()
+    {
+        yield return new WaitForSeconds(.1f);
+        Anim.SetTrigger("KnockedOut");
+        transform.GetComponent<CharacterInput>().enabled = false;
+        GetComponent<React>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+
+    }
+
     public void SetWalkRight (bool value)
     {
-       
-         walkRight = value;
+        walkRight = value;
     }
 
     public void SetWalkLeft (bool value)
     {
-       
         walkLeft = value;
     }
 
