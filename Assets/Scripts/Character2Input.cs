@@ -7,6 +7,7 @@ public class Character2Input : CharacterInput,ICharacterInput
 {
     protected override void WalkingLeftRight()
     {
+   
         if (animatorStateInfo.IsTag("Motion"))
         {
             ResetTimeSlowMotion();
@@ -20,7 +21,7 @@ public class Character2Input : CharacterInput,ICharacterInput
                     transform.Translate(WalkSpeed * Time.deltaTime, 0, 0);
                 }
             }
-            if (Input.GetAxis("HorizontalP2")<0)
+            if (Input.GetAxis("HorizontalP2")<0) 
             {
                 if (!CanWalkLeft) return;
                 if (walkLeft)
@@ -47,7 +48,7 @@ public class Character2Input : CharacterInput,ICharacterInput
         { 
             transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
              StartCoroutine(KnockedOut());
-         // StartCoroutine(VictoryCheer());
+         
 
 
         }
@@ -55,19 +56,23 @@ public class Character2Input : CharacterInput,ICharacterInput
         {
             StartCoroutine(VictoryCheer());
             transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
-
+            Anim.SetBool("Forward",false);
+            Anim.SetBool("Backward",false);
         }
     }
 
     IEnumerator VictoryCheer()
     {
         transform.GetComponent<Character2Input>().enabled = false;
-        yield return new WaitForSeconds(1.5f);
+        gameIsOver = true;
+
+        yield return new WaitForSeconds(1.0f);
         Anim.SetTrigger("Victory");
     }
 
     IEnumerator KnockedOut()
     {
+
         yield return new WaitForSeconds(.1f);
         Anim.SetTrigger("KnockedOut");
         transform.GetComponent<Character2Input>().enabled = false;

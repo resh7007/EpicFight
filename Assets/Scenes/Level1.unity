@@ -330,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1715866586, guid: 2698129f97857473287271930343fe76, type: 3}
       propertyPath: DamageAmount
-      value: 0.1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1715866586, guid: 2698129f97857473287271930343fe76, type: 3}
       propertyPath: EmitHeavyKickFX
@@ -1991,7 +1991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915713906, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
       propertyPath: DamageAmount
-      value: 0.1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1915713906, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
       propertyPath: EmitHeavyKickFX

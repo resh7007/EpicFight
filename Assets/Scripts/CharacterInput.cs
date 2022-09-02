@@ -16,6 +16,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     protected Rigidbody _rb;
     protected Collider _boxCollider;
     protected Collider _capsuleCollider;
+    protected bool gameIsOver = false;
     public void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
@@ -26,6 +27,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     public void Update()
     {
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0); 
+
         WalkingLeftRight();
         JumpingCrouching();
         CheckIfKnockedOut();
@@ -43,23 +45,28 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
         {
             transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
             StartCoroutine(KnockedOut());
+        
         }
 
         if (Save.Player2Health <= 0)
         { 
             StartCoroutine(VictoryCheer());
             transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
-
+            Anim.SetBool("Forward",false);
+            Anim.SetBool("Backward",false);
         }
     }
     IEnumerator VictoryCheer()
     {
         transform.GetComponent<CharacterInput>().enabled = false;
-        yield return new WaitForSeconds(1.5f);
+        gameIsOver = true;
+
+        yield return new WaitForSeconds(1.0f);
+
         Anim.SetTrigger("Victory");
     }
      IEnumerator KnockedOut()
-    {
+     {
         yield return new WaitForSeconds(.1f);
         Anim.SetTrigger("KnockedOut");
         transform.GetComponent<CharacterInput>().enabled = false;
@@ -91,7 +98,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     }
 
     protected virtual void WalkingLeftRight()
-    { 
+    {  
 
         if (animatorStateInfo.IsTag("Motion"))
         {
