@@ -109,8 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
-  EmitKickFX: 1
+  EmitHeavyKickFX: 1
   EmitFistFX: 0
+  EmitLightKickFX: 0
 --- !u!1 &595942733
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,8 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitKickFX: 0
+  EmitHeavyKickFX: 0
   EmitFistFX: 0
+  EmitLightKickFX: 1
 --- !u!1 &672929613
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,8 +333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitKickFX: 0
+  EmitHeavyKickFX: 0
   EmitFistFX: 0
+  EmitLightKickFX: 0
 --- !u!1 &934054113
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,8 +445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
-  EmitKickFX: 0
+  EmitHeavyKickFX: 0
   EmitFistFX: 1
+  EmitLightKickFX: 0
 --- !u!1 &1058916422
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,8 +557,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitKickFX: 0
+  EmitHeavyKickFX: 0
   EmitFistFX: 0
+  EmitLightKickFX: 1
 --- !u!1 &1248854427
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,8 +669,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.05
-  EmitKickFX: 0
+  EmitHeavyKickFX: 0
   EmitFistFX: 0
+  EmitLightKickFX: 0
 --- !u!1 &1317583259
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,8 +781,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
-  EmitKickFX: 1
+  EmitHeavyKickFX: 1
   EmitFistFX: 0
+  EmitLightKickFX: 0
 --- !u!1 &1480737576
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,8 +893,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 0.1
-  EmitKickFX: 0
+  EmitHeavyKickFX: 0
   EmitFistFX: 1
+  EmitLightKickFX: 0
 --- !u!1 &1915713903
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,9 +962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab3f870664a544999550abec95f5a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 0.9
-  EmitKickFX: 1
+  DamageAmount: 0.1
+  EmitHeavyKickFX: 1
   EmitFistFX: 0
+  EmitLightKickFX: 0
 --- !u!1 &2085905445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,6 +3350,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.79
       objectReference: {fileID: 0}
+    - target: {fileID: 993323223549973952, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: heavyFistParticle
+      value: 
+      objectReference: {fileID: 8410351275827116930}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: heavyKickParticle
+      value: 
+      objectReference: {fileID: 4530681785442493448}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: lightKickParticle
+      value: 
+      objectReference: {fileID: 7470221544341901136}
     - target: {fileID: 993323223549973955, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Height
       value: 0.25
@@ -3395,11 +3420,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 993323223549974012, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Name
-      value: PlayerMaskedPurpleGuy
+      value: PlayerMaskedPurpleGuy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 993323223549974012, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 993323223549974012, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 993323223549974012, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_TagString
@@ -3416,6 +3445,10 @@ PrefabInstance:
     - target: {fileID: 2447013809907037030, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_TagString
       value: P2Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045661438963976812, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 3096775770736840066, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Layer
@@ -3519,9 +3552,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7381252023473672668, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
   m_PrefabInstance: {fileID: 5710244773834516296}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7333875022364256970 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3096775770736840066, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+--- !u!198 &8410351275827116930 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4290044451646233802, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+  m_PrefabInstance: {fileID: 5710244773834516296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4530681785442493448 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8205253176128832320, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+  m_PrefabInstance: {fileID: 5710244773834516296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7470221544341901136 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2924335567671388184, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
   m_PrefabInstance: {fileID: 5710244773834516296}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4825082994890404532 stripped
@@ -3556,33 +3599,3 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: -0.52, z: 0}
---- !u!114 &2029616197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825082994890404532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2c6d9bcef1463c84c40b945bcbc68d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canWalkRight: 1
-  _canWalkLeft: 1
-  WalkSpeed: 2
-  IsJumping: 0
-  walkRight: 1
-  walkLeft: 1
---- !u!114 &2820096384954187261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7333875022364256970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247a27a09aeb445f19bf06aaf4c28a9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

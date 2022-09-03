@@ -8,7 +8,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     protected Animator Anim;
     [SerializeField] protected bool _canWalkRight = true;
     [SerializeField] protected bool _canWalkLeft = true;
-    [SerializeField] protected float WalkSpeed=0.03f;
+    [SerializeField] protected float WalkSpeed=3f;
     [SerializeField] protected bool IsJumping;
     [SerializeField] protected bool walkRight = true;
     [SerializeField] protected bool walkLeft = true;

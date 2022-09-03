@@ -4,16 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveRestrict : MonoBehaviour
-{
-    private GameObject player;
+{ 
     private ICharacterInput characterInput;
     private string opponentTag1;
     private string opponentTag2;
 
-    private void Awake()
-    {
-        player = transform.parent.parent.parent.gameObject;
- 
+
+    public void SetPlayer(GameObject player)
+    { 
         characterInput=player.GetComponent<ICharacterInput>();
         if (player.transform.CompareTag("player1"))
         {
@@ -25,11 +23,9 @@ public class MoveRestrict : MonoBehaviour
         {
             opponentTag1 = "P1Left";
             opponentTag2 = "P1Right";
-
         }
- 
-
     }
+ 
 
     private void OnTriggerEnter(Collider other)
     {

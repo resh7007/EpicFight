@@ -14,23 +14,33 @@ public class PlayerMovement : MonoBehaviour
     public int dir;
     public ParticleSystem heavyFistParticle;
     public ParticleSystem heavyKickParticle;
-    public ParticleSystem lightKickParticle;
-
+    public ParticleSystem lightKickParticle; 
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
         PlayerGO = transform.GetChild(0).gameObject;
-        AssignAnOppponent();
+        
     }
 
-    
-    void AssignAnOppponent()
+    public MoveRestrict GetMoveRestrict()
     {
-        if(transform.CompareTag("player1"))
-            Opponent = GameObject.FindWithTag("player2");
-        if(transform.CompareTag("player2"))
-            Opponent = GameObject.FindWithTag("player1");
+       return GetComponentInChildren<MoveRestrict>();
+    }
 
+    public void AssignAnOppponent(GameObject _opponent)
+    {
+        // if(transform.CompareTag("player1"))
+        //     Opponent = GameObject.FindWithTag("player2");
+        // if(transform.CompareTag("player2"))
+        //     Opponent = GameObject.FindWithTag("player1");
+        Opponent = _opponent;
+    }
+
+    public void AssignParticles(ParticleSystem _heavyFistParticle, ParticleSystem _heavyKickParticle, ParticleSystem _lightKickParticle)
+    {
+        heavyFistParticle = _heavyFistParticle;
+        heavyKickParticle = _heavyKickParticle;
+        lightKickParticle = _lightKickParticle;
     }
 
     public ParticleSystem GetHeavyFistParticle()
