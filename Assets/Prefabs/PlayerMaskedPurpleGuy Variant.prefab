@@ -3355,6 +3355,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: LeftRestrict
+      value: 
+      objectReference: {fileID: 1852863846684500453}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: RightRestrict
+      value: 
+      objectReference: {fileID: 7983570724735685678}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: heavyFistParticle
       value: 
       objectReference: {fileID: 8410351275827116930}
@@ -3436,7 +3444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447013809907037030, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Name
-      value: P2Right
+      value: RightRestrict
       objectReference: {fileID: 0}
     - target: {fileID: 2447013809907037030, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Layer
@@ -3484,7 +3492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235352998724552365, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Name
-      value: P2Left
+      value: LeftRestrict
       objectReference: {fileID: 0}
     - target: {fileID: 6235352998724552365, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Layer
@@ -3550,6 +3558,16 @@ PrefabInstance:
 --- !u!4 &2977341996901332628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7381252023473672668, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+  m_PrefabInstance: {fileID: 5710244773834516296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1852863846684500453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6235352998724552365, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+  m_PrefabInstance: {fileID: 5710244773834516296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7983570724735685678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2447013809907037030, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
   m_PrefabInstance: {fileID: 5710244773834516296}
   m_PrefabAsset: {fileID: 0}
 --- !u!198 &8410351275827116930 stripped

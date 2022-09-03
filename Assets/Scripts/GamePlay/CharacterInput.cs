@@ -12,11 +12,10 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     [SerializeField] protected bool IsJumping;
     [SerializeField] protected bool walkRight = true;
     [SerializeField] protected bool walkLeft = true;
-    private bool isInBlock = false;
-    protected Rigidbody _rb;
-    protected Collider _boxCollider;
-    protected Collider _capsuleCollider;
-    protected bool gameIsOver = false;
+    private bool isInBlock;
+    private Rigidbody _rb;
+    private Collider _boxCollider;
+    private Collider _capsuleCollider; 
     public void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
@@ -58,8 +57,7 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     }
     IEnumerator VictoryCheer()
     {
-        transform.GetComponent<CharacterInput>().enabled = false;
-        gameIsOver = true;
+        transform.GetComponent<CharacterInput>().enabled = false; 
 
         yield return new WaitForSeconds(1.0f);
 

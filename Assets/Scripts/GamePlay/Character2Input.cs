@@ -64,7 +64,7 @@ public class Character2Input : CharacterInput,ICharacterInput
     IEnumerator VictoryCheer()
     {
         transform.GetComponent<Character2Input>().enabled = false;
-        gameIsOver = true;
+  
 
         yield return new WaitForSeconds(1.0f);
         Anim.SetTrigger("Victory");

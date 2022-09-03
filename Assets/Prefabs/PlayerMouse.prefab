@@ -237,8 +237,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917469823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.089, z: -0}
-  m_LocalScale: {x: 0.11269, y: 0.19174205, z: 0.11269}
+  m_LocalPosition: {x: -0, y: 0.1826, z: 0}
+  m_LocalScale: {x: 0.11269, y: 0.3954946, z: 0.11269}
   m_Children: []
   m_Father: {fileID: 6659895933051638438}
   m_RootOrder: 4
@@ -2583,6 +2583,14 @@ PrefabInstance:
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: LeftRestrict
+      value: 
+      objectReference: {fileID: 2224481270151947454}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: RightRestrict
+      value: 
+      objectReference: {fileID: 7611953571788329333}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: heavyFistParticle
       value: 
       objectReference: {fileID: 8349622972927721177}
@@ -2666,6 +2674,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: player1
       objectReference: {fileID: 0}
+    - target: {fileID: 2447013809907037030, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_Name
+      value: RightRestrict
+      objectReference: {fileID: 0}
     - target: {fileID: 3045661438963976812, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.05
@@ -2713,6 +2725,10 @@ PrefabInstance:
     - target: {fileID: 5836538073602410226, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235352998724552365, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: m_Name
+      value: LeftRestrict
       objectReference: {fileID: 0}
     - target: {fileID: 6729737409304117168, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: WalkSpeed
@@ -2782,6 +2798,16 @@ Transform:
 --- !u!1 &7111017020941938577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3096775770736840066, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+  m_PrefabInstance: {fileID: 5212526697165775379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2224481270151947454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6235352998724552365, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+  m_PrefabInstance: {fileID: 5212526697165775379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7611953571788329333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2447013809907037030, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
   m_PrefabInstance: {fileID: 5212526697165775379}
   m_PrefabAsset: {fileID: 0}
 --- !u!198 &8349622972927721177 stripped

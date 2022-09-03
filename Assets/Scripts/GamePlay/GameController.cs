@@ -7,11 +7,7 @@ public class GameController : MonoBehaviour
     public GameObject Player1Prefab;
     public GameObject Player2Prefab;
     private GameObject Player1;
-    private GameObject Player2;
-    public CharacterInput _CharacterInput;
-    public Character2Input _Character2Input;
-    public ActionsInput _ActionsInput;
-    public ActionsInput2 _ActionsInput2;
+    private GameObject Player2; 
     
     void Awake()
     {
@@ -25,6 +21,11 @@ public class GameController : MonoBehaviour
     { 
         Player1 = Instantiate(Player2Prefab, SpawnPosPlayer1.transform.position, Quaternion.identity);
         Player2 = Instantiate(Player1Prefab, SpawnPosPlayer2.transform.position, Quaternion.identity);
+
+        Player1.tag = "player1";
+        Player2.tag = "player2";
+     
+
     }
 
     void SetPlayerScripts()
@@ -41,6 +42,12 @@ public class GameController : MonoBehaviour
         PlayerMovement p2PlayerMovement = Player2.GetComponent<PlayerMovement>();
         p1PlayerMovement.GetMoveRestrict().SetPlayer(Player1);
         p2PlayerMovement.GetMoveRestrict().SetPlayer(Player2);
+
+        p1PlayerMovement.LeftRestrict.tag = "P1Left";
+        p1PlayerMovement.RightRestrict.tag = "P1Right";
+
+        p2PlayerMovement.LeftRestrict.tag = "P2Left";
+        p2PlayerMovement.RightRestrict.tag = "P2Right";
 
     }
 

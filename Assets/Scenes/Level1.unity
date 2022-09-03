@@ -580,11 +580,7 @@ MonoBehaviour:
   SpawnPosPlayer1: {fileID: 425097168}
   SpawnPosPlayer2: {fileID: 1467981441}
   Player1Prefab: {fileID: 5016556284008855535, guid: 2698129f97857473287271930343fe76, type: 3}
-  Player2Prefab: {fileID: 4825082994890404532, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
-  _CharacterInput: {fileID: 0}
-  _Character2Input: {fileID: 0}
-  _ActionsInput: {fileID: 0}
-  _ActionsInput2: {fileID: 0}
+  Player2Prefab: {fileID: 5016556284008855535, guid: 2698129f97857473287271930343fe76, type: 3}
 --- !u!1 &890294746
 GameObject:
   m_ObjectHideFlags: 0
