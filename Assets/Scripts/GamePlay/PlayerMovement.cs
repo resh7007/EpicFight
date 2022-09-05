@@ -31,11 +31,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void AssignAnOppponent(GameObject _opponent)
-    {
-        // if(transform.CompareTag("player1"))
-        //     Opponent = GameObject.FindWithTag("player2");
-        // if(transform.CompareTag("player2"))
-        //     Opponent = GameObject.FindWithTag("player1");
+    { 
         Opponent = _opponent;
     }
 

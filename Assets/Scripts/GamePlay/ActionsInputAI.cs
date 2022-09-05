@@ -1,12 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionsInput2 : ActionsInput
+public class ActionsInputAI : ActionsInput
 {
-
-
     protected override void StandingAttacks()
     {
         if (animatorStateInfo.IsTag("Motion"))

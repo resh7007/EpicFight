@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class Character2Input : CharacterInput,ICharacterInput
+public class Character2Input : CharacterInput
 {
     protected override void WalkingLeftRight()
     {

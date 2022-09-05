@@ -16,14 +16,14 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     private Rigidbody _rb;
     private Collider _boxCollider;
     private Collider _capsuleCollider; 
-    public void Awake()
+    protected virtual void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody>();
         _boxCollider = GetComponent<BoxCollider>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
     }
-    public void Update()
+    protected virtual void Update()
     {
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0); 
 
