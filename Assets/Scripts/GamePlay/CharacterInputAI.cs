@@ -5,9 +5,9 @@ using UnityEngine;
 public class CharacterInputAI : CharacterInput
 {
     private float OppDistance;
-    public float AttackDistance = 1.5f;
-    private bool MoveAI = true;
-    private bool isInAttackState = false;
+    public float AttackDistance = 2.5f;
+    [SerializeField]private bool MoveAI = true;
+    private bool isInAttackRange = false;
     private GameObject Opponent;
     private GameObject Player;
     private PlayerMovement playerMovement;
@@ -55,7 +55,7 @@ public class CharacterInputAI : CharacterInput
                 MoveAI = false;
                 Anim.SetBool("Forward",false);
                 Anim.SetBool("Backward",false);       
-                isInAttackState = true;
+                isInAttackRange = true;
                 StartCoroutine(ForwardFalse());
 
 
@@ -70,8 +70,8 @@ public class CharacterInputAI : CharacterInput
                     {
                         Anim.SetBool("Forward", true);
                         Anim.SetBool("Backward", false);
-                        isInAttackState = false;
-                        transform.Translate(WalkSpeed * Time.deltaTime*0, 0, 0);
+                        isInAttackRange = false;
+                        transform.Translate(WalkSpeed * Time.deltaTime, 0, 0);
                         
                     }
                 }
@@ -83,9 +83,9 @@ public class CharacterInputAI : CharacterInput
                     {
                         Anim.SetBool("Backward", true);
                         Anim.SetBool("Forward", false);
-                        isInAttackState = false;
+                        isInAttackRange = false;
 
-                        transform.Translate(-WalkSpeed * Time.deltaTime*0, 0, 0);
+                        transform.Translate(-WalkSpeed * Time.deltaTime, 0, 0);
                     }
 
                 }
@@ -101,7 +101,7 @@ public class CharacterInputAI : CharacterInput
     {
         if (Save.Player2Health <= 0)
         { 
-            transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
+            transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
              StartCoroutine(KnockedOut());
          
 
@@ -110,7 +110,7 @@ public class CharacterInputAI : CharacterInput
         if (Save.Player1Health <= 0)
         {
             StartCoroutine(VictoryCheer());
-            transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
+            transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
             Anim.SetBool("Forward",false);
             Anim.SetBool("Backward",false);
         }
@@ -118,9 +118,8 @@ public class CharacterInputAI : CharacterInput
 
     IEnumerator VictoryCheer()
     {
-        transform.GetComponent<Character2Input>().enabled = false;
-  
-
+        transform.GetComponent<CharacterInputAI>().enabled = false;
+        
         yield return new WaitForSeconds(1.0f);
         Anim.SetTrigger("Victory");
     }
@@ -130,7 +129,7 @@ public class CharacterInputAI : CharacterInput
 
         yield return new WaitForSeconds(.1f);
         Anim.SetTrigger("KnockedOut");
-        transform.GetComponent<Character2Input>().enabled = false;
+        transform.GetComponent<CharacterInputAI>().enabled = false;
         GetComponent<React>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         
@@ -159,5 +158,11 @@ public class CharacterInputAI : CharacterInput
     {
         yield return new WaitForSeconds(.6f);
         MoveAI = true;
+    }
+
+    public bool GetIsInAttackRange()
+    {
+        return isInAttackRange;
+
     }
 }

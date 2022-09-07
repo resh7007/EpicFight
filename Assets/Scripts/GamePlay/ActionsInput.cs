@@ -21,7 +21,7 @@ public class ActionsInput : MonoBehaviour
         Anim = transform.GetComponent<Animator>(); 
 
     }
-    protected void Update()
+    protected virtual void Update()
     { 
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 

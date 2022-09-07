@@ -6,19 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/MaskedPurpleGuy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/MaskedPurpleGuy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/Character2Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/Character2Input.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInputAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInputAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/CharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/CharacterInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/CharacterInputAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/CharacterInputAI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ICharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ICharacterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/MoveRestrict.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/MoveRestrict.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ScreenBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ScreenBounds.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +103,7 @@
       <workItem from="1662034948907" duration="6953000" />
       <workItem from="1662087521080" duration="25369000" />
       <workItem from="1662373744612" duration="6168000" />
-      <workItem from="1662445748177" duration="3487000" />
+      <workItem from="1662445748177" duration="7303000" />
     </task>
     <servers />
   </component>

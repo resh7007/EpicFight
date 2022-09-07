@@ -89,6 +89,8 @@ public class GameController : MonoBehaviour
     {
         Player2.AddComponent<CharacterInputAI>();
         Player2.transform.GetChild(0).gameObject.AddComponent<ActionsInputAI>();
+        Player2.transform.GetChild(0).gameObject.GetComponent<ActionsInputAI>().SetCharacterInputAI(Player2.GetComponent<CharacterInputAI>());
+
         Player2.GetComponent<ScreenBounds>().SetCharacterInput();
 
         Player2.GetComponent<CharacterInputAI>().SetOpponent(Player1,Player2);

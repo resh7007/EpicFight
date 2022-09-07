@@ -15,7 +15,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     protected Rigidbody _rb;
     protected Collider _boxCollider;
     protected Collider _capsuleCollider;
-    public float JumpSpeed =9f;
+    public float JumpSpeed =12f;
     protected float MoveSpeed;
     protected PlayerActions _playerActions;
 
