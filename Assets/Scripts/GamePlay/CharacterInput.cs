@@ -38,37 +38,17 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 
         WalkingLeftRight();
-        JumpingCrouching();
-        CheckIfKnockedOut();
+        JumpingCrouching(); 
     }
 
     public bool GetIsInBlock()
     {
         return isInBlock;
-    }
-
-    protected virtual void CheckIfKnockedOut()
-    {
-
-        if (Save.Player1Health <= 0)
-        {
-            transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
-            StartCoroutine(KnockedOut());
-
-        }
-
-        if (Save.Player2Health <= 0)
-        {
-            StartCoroutine(VictoryCheer());
-            transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
-            Anim.SetBool("Forward", false);
-            Anim.SetBool("Backward", false);
-        }
-    }
+    } 
 
     IEnumerator VictoryCheer()
     {
-        transform.GetComponent<CharacterInput>().enabled = false;
+        transform.GetComponent<ICharacterInput>().enabled = false;
 
         yield return new WaitForSeconds(1.0f);
 
@@ -79,7 +59,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     {
         yield return new WaitForSeconds(.1f);
         Anim.SetTrigger("KnockedOut");
-        transform.GetComponent<CharacterInput>().enabled = false;
+        transform.GetComponent<ICharacterInput>().enabled = false;
         GetComponent<React>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
 
@@ -153,7 +133,23 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         CheckIfBlock();
     }
 
-    protected void ResetTimeSlowMotion()
+    public void Lose()
+    {
+        ResetTimeSlowMotion();
+        
+        transform.GetChild(0).GetComponent<IActionsInput>().enabled = false;
+        StartCoroutine(KnockedOut());
+    }
+    public void Win()
+    {
+        ResetTimeSlowMotion();
+
+        StartCoroutine(VictoryCheer());
+        transform.GetChild(0).GetComponent<IActionsInput>().enabled = false;
+        Anim.SetBool("Forward", false);
+        Anim.SetBool("Backward", false);
+    }
+    public void ResetTimeSlowMotion()
     {
          Time.timeScale = 1;
     }

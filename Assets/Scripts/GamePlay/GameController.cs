@@ -15,7 +15,6 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         SpawnPlayers();
-
         if (isTwoPlayerGame)
         {
             SetPlayerScripts();
@@ -31,6 +30,8 @@ public class GameController : MonoBehaviour
             SetPlayersParticles();
 
         }
+        SetupGameManager();
+
     }
 
     void SpawnPlayers()
@@ -38,6 +39,13 @@ public class GameController : MonoBehaviour
         SpawnPlayer1();
         SpawnPlayer2();
     }
+
+    void SetupGameManager()
+    {
+        GetComponent<GameManager>().SetPlayers(Player1,Player2);
+    }
+
+
     void SetPlayerScripts()
     {
         SetPlayer1Script();

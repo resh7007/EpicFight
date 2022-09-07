@@ -544,6 +544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885632524}
   - component: {fileID: 885632525}
+  - component: {fileID: 885632526}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -582,9 +583,20 @@ MonoBehaviour:
   Player1Prefab: {fileID: 4825082994890404532, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
   Player2Prefab: {fileID: 5016556284008855535, guid: 2698129f97857473287271930343fe76, type: 3}
   isTwoPlayerGame: 0
-  character:
-  - {fileID: 11400000, guid: 08688c33055b44e4399ff1a7e62760ad, type: 2}
-  - {fileID: 11400000, guid: 75ee59ecb86b244848a0e543538a1292, type: 2}
+--- !u!114 &885632526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885632523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11f3eb6095f946b4b485bbb9cd31b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!1 &890294746
 GameObject:
   m_ObjectHideFlags: 0

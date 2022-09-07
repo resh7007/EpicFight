@@ -31,8 +31,7 @@ public class CharacterInputAI : CharacterInput
 
         FindDistanceToOpponent();
         WalkingLeftRight();
-        JumpingCrouching();
-        CheckIfKnockedOut();
+        JumpingCrouching(); 
 
     }
 
@@ -96,44 +95,41 @@ public class CharacterInputAI : CharacterInput
         CheckIfBlock();
 
     }
-  
-    protected override void CheckIfKnockedOut()
-    {
-        if (Save.Player2Health <= 0)
-        { 
-            transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
-             StartCoroutine(KnockedOut());
-         
-
-
-        }
-        if (Save.Player1Health <= 0)
-        {
-            StartCoroutine(VictoryCheer());
-            transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
-            Anim.SetBool("Forward",false);
-            Anim.SetBool("Backward",false);
-        }
-    }
-
-    IEnumerator VictoryCheer()
-    {
-        transform.GetComponent<CharacterInputAI>().enabled = false;
-        
-        yield return new WaitForSeconds(1.0f);
-        Anim.SetTrigger("Victory");
-    }
-
-    IEnumerator KnockedOut()
-    {
-
-        yield return new WaitForSeconds(.1f);
-        Anim.SetTrigger("KnockedOut");
-        transform.GetComponent<CharacterInputAI>().enabled = false;
-        GetComponent<React>().enabled = false;
-        GetComponent<BoxCollider>().enabled = false;
-        
-    }
+    // public void Lose()
+    // {
+    //     ResetTimeSlowMotion();
+    //     
+    //     transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
+    //     StartCoroutine(KnockedOut());
+    // }
+    // public void Win()
+    // {
+    //     ResetTimeSlowMotion();
+    //
+    //     StartCoroutine(VictoryCheer());
+    //     transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
+    //     Anim.SetBool("Forward", false);
+    //     Anim.SetBool("Backward", false);
+    // }
+    //
+    // IEnumerator VictoryCheer()
+    // {
+    //     transform.GetComponent<CharacterInputAI>().enabled = false;
+    //     
+    //     yield return new WaitForSeconds(1.0f);
+    //     Anim.SetTrigger("Victory");
+    // }
+    //
+    // IEnumerator KnockedOut()
+    // {
+    //
+    //     yield return new WaitForSeconds(.1f);
+    //     Anim.SetTrigger("KnockedOut");
+    //     transform.GetComponent<CharacterInputAI>().enabled = false;
+    //     GetComponent<React>().enabled = false;
+    //     GetComponent<BoxCollider>().enabled = false;
+    //     
+    // }
     protected override void JumpingCrouching()
     {
         if (Input.GetAxis("VerticalP2") > 0 && !IsJumping)

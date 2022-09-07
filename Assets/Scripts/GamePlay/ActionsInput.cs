@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionsInput : MonoBehaviour
+public class ActionsInput : MonoBehaviour,IActionsInput
 {
     protected AnimatorStateInfo animatorStateInfo;
     protected Animator Anim;
