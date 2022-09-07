@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class ActionsInput2 : ActionsInput
 {
-
-
     protected override void StandingAttacks()
     {
         if (animatorStateInfo.IsTag("Motion"))

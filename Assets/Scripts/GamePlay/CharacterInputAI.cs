@@ -27,6 +27,8 @@ public class CharacterInputAI : CharacterInput
     protected override void Update()
     {         
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
+        WalkSpeed = _playerActions.GetFlyingJump() ? JumpSpeed : MoveSpeed;
+
         FindDistanceToOpponent();
         WalkingLeftRight();
         JumpingCrouching();
@@ -47,7 +49,7 @@ public class CharacterInputAI : CharacterInput
 
             if (AttackDistance > OppDistance)
             {
-                if (!CanWalkRight) return;
+                if (!GetCanWalkRight()) return;
                 if(!MoveAI) return;
 
                 MoveAI = false;
@@ -63,26 +65,27 @@ public class CharacterInputAI : CharacterInput
                 if (playerMovement.dir<0)
                 {
                     if(!MoveAI) return;
-                    if (!CanWalkRight) return;
+                    if (!GetCanWalkRight()) return;
                     if (walkRight)
                     {
                         Anim.SetBool("Forward", true);
                         Anim.SetBool("Backward", false);
                         isInAttackState = false;
-                        transform.Translate(WalkSpeed * Time.deltaTime, 0, 0);
+                        transform.Translate(WalkSpeed * Time.deltaTime*0, 0, 0);
+                        
                     }
                 }
                 if (playerMovement.dir>0)
                 {
                     if(!MoveAI) return;
-                    if (!CanWalkLeft) return;
+                    if (!GetCanWalkLeft()) return;
                     if (walkLeft)
                     {
                         Anim.SetBool("Backward", true);
                         Anim.SetBool("Forward", false);
                         isInAttackState = false;
 
-                        transform.Translate(-WalkSpeed * Time.deltaTime, 0, 0);
+                        transform.Translate(-WalkSpeed * Time.deltaTime*0, 0, 0);
                     }
 
                 }

@@ -5,21 +5,28 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
 
-    [SerializeField] private float JumpSpeed;
-    [SerializeField] private float FlipHight=.3f;
-    [SerializeField] private float FlipForwardDist=1.3f;
+    [SerializeField] private float JumpSpeed=2;
+    [SerializeField] private float FlipHight=.3f; 
     [SerializeField] private bool HeavyMoving = false;
     [SerializeField] private float PunchSlideAmount =.5f;
     private GameObject Player1;
     private PlayerMovement playerMovement;
     private AudioSource MyPlayer;
-    
+    private ICharacterInput _characterInput;
     [SerializeField] private float HeavyReactAmount = 3f;
     private bool HeavyReact = false;
+    private Rigidbody rb;
+    private bool FlyingJump = false;
+
     private void Awake()
     {
         Player1 = transform.parent.gameObject;
         playerMovement =Player1.GetComponent<PlayerMovement>();
+        rb = Player1.GetComponent<Rigidbody>();
+    }
+    public void SetCharacterInput()
+    {
+        _characterInput =transform.root.GetComponent<ICharacterInput>();
     }
     private void Start()
     { 
@@ -34,25 +41,40 @@ public class PlayerActions : MonoBehaviour
 
     public void JumpUp()
     {
-        Player1.transform.Translate(0,JumpSpeed,0);
+    Player1.transform.Translate(0,JumpSpeed,0); 
+
     }
   
 
     IEnumerator Forward()
-    {
+    { 
+        
         Player1.transform.Translate(0,FlipHight,0);
-        yield return new WaitForSeconds(.15f);
-        Player1.transform.Translate(FlipForwardDist,0,0);
+        FlyingJump = true;
+        yield return new WaitForSeconds(.15f);  
+ 
 
     }
     IEnumerator Backward()
-    {
+    {  
         Player1.transform.Translate(0,FlipHight,0);
-       
-         yield return new WaitForSeconds(.15f);
-        Player1.transform.Translate(-FlipForwardDist,0,0);
+        FlyingJump = true;
+ 
+        yield return new WaitForSeconds(.15f); 
+  
+    }
+
+    public void IdleSpeed()
+    {
+        FlyingJump = false;
 
     }
+
+    public bool GetFlyingJump()
+    {
+        return FlyingJump;
+    }
+
     void HeavyPunchSlide()
     {
         if (!HeavyMoving) return;

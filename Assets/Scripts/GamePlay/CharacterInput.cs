@@ -1,31 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Collections; 
 using UnityEngine;
 
-public class CharacterInput : MonoBehaviour,ICharacterInput
+public class CharacterInput : MonoBehaviour, ICharacterInput
 {
     protected AnimatorStateInfo animatorStateInfo;
     protected Animator Anim;
     [SerializeField] protected bool _canWalkRight = true;
     [SerializeField] protected bool _canWalkLeft = true;
-    [SerializeField] protected float WalkSpeed=3f;
+    [SerializeField] protected float WalkSpeed = 3f;
     [SerializeField] protected bool IsJumping;
     [SerializeField] protected bool walkRight = true;
     [SerializeField] protected bool walkLeft = true;
     private bool isInBlock;
-    private Rigidbody _rb;
-    private Collider _boxCollider;
-    private Collider _capsuleCollider; 
+    protected Rigidbody _rb;
+    protected Collider _boxCollider;
+    protected Collider _capsuleCollider;
+    public float JumpSpeed =9f;
+    protected float MoveSpeed;
+    protected PlayerActions _playerActions;
+
     protected virtual void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody>();
         _boxCollider = GetComponent<BoxCollider>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
+        MoveSpeed = WalkSpeed;
+        _playerActions = GetComponentInChildren<PlayerActions>();
     }
+
     protected virtual void Update()
     {
-        animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0); 
+        WalkSpeed = _playerActions.GetFlyingJump() ? JumpSpeed : MoveSpeed;
+        animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 
         WalkingLeftRight();
         JumpingCrouching();
@@ -38,33 +45,35 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
     }
 
     protected virtual void CheckIfKnockedOut()
-    {  
- 
+    {
+
         if (Save.Player1Health <= 0)
         {
             transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
             StartCoroutine(KnockedOut());
-        
+
         }
 
         if (Save.Player2Health <= 0)
-        { 
+        {
             StartCoroutine(VictoryCheer());
             transform.GetChild(0).GetComponent<ActionsInput>().enabled = false;
-            Anim.SetBool("Forward",false);
-            Anim.SetBool("Backward",false);
+            Anim.SetBool("Forward", false);
+            Anim.SetBool("Backward", false);
         }
     }
+
     IEnumerator VictoryCheer()
     {
-        transform.GetComponent<CharacterInput>().enabled = false; 
+        transform.GetComponent<CharacterInput>().enabled = false;
 
         yield return new WaitForSeconds(1.0f);
 
         Anim.SetTrigger("Victory");
     }
-     IEnumerator KnockedOut()
-     {
+
+    IEnumerator KnockedOut()
+    {
         yield return new WaitForSeconds(.1f);
         Anim.SetTrigger("KnockedOut");
         transform.GetComponent<CharacterInput>().enabled = false;
@@ -73,51 +82,60 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
 
     }
 
-    public void SetWalkRight (bool value)
+    public void SetWalkRight(bool value)
     {
         walkRight = value;
     }
 
-    public void SetWalkLeft (bool value)
+    public void SetWalkLeft(bool value)
     {
         walkLeft = value;
     }
 
-    public bool CanWalkRight
+    public bool GetCanWalkRight()
     {
-        get => _canWalkRight;
-        set => _canWalkRight = value;
+        return _canWalkRight;
     }
 
-    public bool CanWalkLeft
+    public bool GetCanWalkLeft()
     {
-        get => _canWalkLeft;
-        set => _canWalkLeft = value;
+        return _canWalkLeft;
     }
 
+
+    public void SetCanWalkRight(bool canWalk)
+    {
+        _canWalkRight = canWalk;
+    }
+    
+    public void SetCanWalkLeft(bool canWalk)
+    {
+        _canWalkLeft = canWalk;
+    }
+ 
     protected virtual void WalkingLeftRight()
-    {  
-
+    { 
         if (animatorStateInfo.IsTag("Motion"))
         {
             ResetTimeSlowMotion();
             if (Input.GetAxis("Horizontal")>0)
             { 
-                if (!CanWalkRight) return;
+                if (!GetCanWalkRight()) return;
                 if (walkRight)
                 {
                     Anim.SetBool("Forward", true);
-                    transform.Translate(WalkSpeed * Time.deltaTime, 0, 0);
+                     transform.Translate(WalkSpeed * Time.deltaTime, 0, 0);
                 }
             }
             if (Input.GetAxis("Horizontal")<0)
             {
                
-                if (!CanWalkLeft) return;
+                if (!GetCanWalkLeft()) return;
                 if (walkLeft)
                 {
                     Anim.SetBool("Backward", true);
                     transform.Translate(-WalkSpeed * Time.deltaTime, 0, 0);
+
                 }
             }
         }
@@ -148,12 +166,10 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
         }
         else
         {
-          
             _boxCollider.enabled = true;
             _capsuleCollider.enabled = true;
             _rb.isKinematic = false; 
             isInBlock = false;
-
         }
     }
 
@@ -180,4 +196,5 @@ public class CharacterInput : MonoBehaviour,ICharacterInput
         yield return new WaitForSeconds(1.0f);
         IsJumping = false;
     }
+ 
 }

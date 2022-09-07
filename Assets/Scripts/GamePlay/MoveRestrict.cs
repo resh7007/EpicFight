@@ -35,9 +35,7 @@ public class MoveRestrict : MonoBehaviour
         }
         if (other.gameObject.CompareTag(opponentTag2))
         {
-            characterInput.SetWalkLeft(false); 
-
-
+            characterInput.SetWalkLeft(false);
         }
 
     }
@@ -50,7 +48,6 @@ public class MoveRestrict : MonoBehaviour
         if (other.gameObject.CompareTag(opponentTag2))
         {
             characterInput.SetWalkLeft(true);
-
         }
 
     }

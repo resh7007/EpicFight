@@ -14,20 +14,21 @@ public class Character2Input : CharacterInput
 
             if (Input.GetAxis("HorizontalP2")>0)
             {
-                if (!CanWalkRight) return;
+                if (!GetCanWalkRight()) return;
                 if (walkRight)
                 {
-                    Anim.SetBool("Forward", true);
+                    Anim.SetBool("Forward", true); 
                     transform.Translate(WalkSpeed * Time.deltaTime, 0, 0);
+
                 }
             }
             if (Input.GetAxis("HorizontalP2")<0) 
             {
-                if (!CanWalkLeft) return;
+                if (!GetCanWalkLeft()) return;
                 if (walkLeft)
                 {
-                    Anim.SetBool("Backward", true);
-                    transform.Translate(-WalkSpeed * Time.deltaTime, 0, 0);
+                    Anim.SetBool("Backward", true);  
+                    transform.Translate(-WalkSpeed * Time.deltaTime, 0, 0); 
                 }
 
             }
