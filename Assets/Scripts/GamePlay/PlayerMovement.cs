@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem lightKickParticle;
     public GameObject LeftRestrict;
     public GameObject RightRestrict;
-
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();

@@ -15,7 +15,7 @@ public class CharacterInputAI : CharacterInput
     protected override void Awake()
     {
         base.Awake();
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponent<PlayerMovement>(); 
     }
 
     public void SetOpponent(GameObject _opponent,GameObject _player)

@@ -2583,6 +2583,10 @@ PrefabInstance:
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 11400000, guid: 08688c33055b44e4399ff1a7e62760ad, type: 2}
+    - target: {fileID: 993323223549973953, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: LeftRestrict
       value: 
       objectReference: {fileID: 2224481270151947454}
@@ -2714,6 +2718,10 @@ PrefabInstance:
       propertyPath: JumpSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4735867470264178461, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 11400000, guid: 08688c33055b44e4399ff1a7e62760ad, type: 2}
     - target: {fileID: 4735867470264178461, guid: 56856fab9aa244825b0b3c3236d61d4c, type: 3}
       propertyPath: FlipForwardDist
       value: 3

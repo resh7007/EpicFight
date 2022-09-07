@@ -17,6 +17,7 @@ public class PlayerActions : MonoBehaviour
     private bool HeavyReact = false;
     private Rigidbody rb;
     private bool FlyingJump = false;
+    public Character character;
 
     private void Awake()
     {

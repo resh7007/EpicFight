@@ -10,8 +10,7 @@ public class GameController : MonoBehaviour
     private GameObject Player2;
     public bool isTwoPlayerGame;
     private PlayerMovement p1PlayerMovement;
-    private PlayerMovement p2PlayerMovement;
-
+    private PlayerMovement p2PlayerMovement; 
 
     void Awake()
     {

@@ -15,7 +15,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     protected Rigidbody _rb;
     protected Collider _boxCollider;
     protected Collider _capsuleCollider;
-    public float JumpSpeed =12f;
+    [SerializeField]protected float JumpSpeed =12f;
     protected float MoveSpeed;
     protected PlayerActions _playerActions;
 
@@ -25,8 +25,11 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         _rb = GetComponent<Rigidbody>();
         _boxCollider = GetComponent<BoxCollider>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
-        MoveSpeed = WalkSpeed;
+
         _playerActions = GetComponentInChildren<PlayerActions>();
+        WalkSpeed = _playerActions.character.WalkSpeed;
+        JumpSpeed = _playerActions.character.JumpSpeed;
+        MoveSpeed = WalkSpeed;
     }
 
     protected virtual void Update()
