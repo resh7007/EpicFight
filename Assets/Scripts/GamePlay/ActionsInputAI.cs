@@ -54,7 +54,6 @@ public class ActionsInputAI : ActionsInput
                 Anim.SetTrigger("HeavyPunch");
                 isHit = false;
                 AttackNumber = 0;
-
             }
 
             if (AttackNumber ==3)
@@ -62,7 +61,6 @@ public class ActionsInputAI : ActionsInput
                 Anim.SetTrigger("LightKick");
                 isHit = false;
                 AttackNumber = 0;
-
             }
 
             if (AttackNumber ==4)
@@ -70,32 +68,20 @@ public class ActionsInputAI : ActionsInput
                 Anim.SetTrigger("HeavyKick");
                 isHit = false;
                 AttackNumber = 0;
-
             }
 
-            if (Input.GetButtonDown("BlockP2"))
-            {
-                Anim.SetTrigger("BlockOn");
-            }
+          
         }
-
-        if (animatorStateInfo.IsTag("Block"))
-        {
-            if (Input.GetButtonUp("BlockP2"))
-            {
-                Anim.SetTrigger("BlockOff");
-            }
-
-        }
+ 
     }
 
     protected override  void CrouchingAttack()
     {
         if (animatorStateInfo.IsTag("Crouching"))
         { 
-                Anim.SetTrigger("HeavyKick");
-                isHit = false;
-                StartCoroutine(UnCrouch());
+            Anim.SetTrigger("HeavyKick");
+            isHit = false;
+            StartCoroutine(UnCrouch());
         }
     }
 

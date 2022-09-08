@@ -44,21 +44,18 @@ public class ActionsInput : MonoBehaviour,IActionsInput
             {
                 Anim.SetTrigger("HeavyPunch");
                 isHit = false;
-
             }
 
             if (Input.GetButtonDown("Fire3"))
             {
                 Anim.SetTrigger("LightKick");
                 isHit = false;
-
             }
 
             if (Input.GetButtonDown("Jump"))
             {
                 Anim.SetTrigger("HeavyKick");
                 isHit = false;
-
             }
 
             if (Input.GetButtonDown("Block"))
@@ -85,7 +82,6 @@ public class ActionsInput : MonoBehaviour,IActionsInput
             { 
                 Anim.SetTrigger("HeavyKick");
                 isHit = false;
-
             }
         }
     }
@@ -98,7 +94,6 @@ public class ActionsInput : MonoBehaviour,IActionsInput
             { 
                 Anim.SetTrigger("LightKick");
                 isHit = false;
-
             }  
         }
     }

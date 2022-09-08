@@ -12,7 +12,7 @@ public class CharacterInputAI : CharacterInput
     private GameObject Player;
     private PlayerMovement playerMovement;
     private React _react;
-    [SerializeField] private bool isInCrouch = false;
+    [SerializeField] private bool isBlocking = false;
     private IActionsInput actionsInput;
     protected override void Awake()
     {
@@ -101,23 +101,40 @@ public class CharacterInputAI : CharacterInput
     } 
     protected override void JumpingCrouching()
     {
-        if (Input.GetAxis("VerticalP2") > 0 && !IsJumping)
-        {
-            Anim.SetTrigger("Jump");
-            IsJumping = true;
-            StartCoroutine(JumpPause());
-        }
 
-        if (_react.GetDefend()==3)
+        if (_react.GetDefend()==2)
         {
-            Debug.Log("_react.GetDefend()="+_react.GetDefend());
+            if (isBlocking) return;
+            actionsInput.SetInAttackState();
+            Anim.SetTrigger("BlockOn");
+            isBlocking = true;
+            StartCoroutine(EndBlock());
+        }
+        
+        if (_react.GetDefend()==3)
+        { 
             actionsInput.SetInAttackState();
 
             Anim.SetBool("Crouch", true);
              _react.SetDefend(0); 
         }
- 
-    } 
+        if (_react.GetDefend() == 4)
+        {
+            Anim.SetTrigger("Jump");
+            _react.SetDefend(0); 
+
+        }
+  
+    }
+
+    IEnumerator EndBlock()
+    {
+        yield return new WaitForSeconds(1);
+        Anim.SetTrigger("BlockOff");
+        isBlocking = false;
+        _react.SetDefend(0);
+
+    }
 
     IEnumerator ForwardFalse()
     {
@@ -130,8 +147,5 @@ public class CharacterInputAI : CharacterInput
         return isInAttackRange;
 
     }
-    public override void SetInAttackState()
-    {
-        isInCrouch = true; 
-    }
+   
 }

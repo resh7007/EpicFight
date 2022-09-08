@@ -13,28 +13,24 @@ public class ActionsInput2 : ActionsInput
             {
                 Anim.SetTrigger("LightPunch");
                 isHit = false;
-
             }
 
             if (Input.GetButtonDown("Fire2P2"))
             {
                 Anim.SetTrigger("HeavyPunch");
                 isHit = false;
-
             }
 
             if (Input.GetButtonDown("Fire3P2"))
             {
                 Anim.SetTrigger("LightKick");
                 isHit = false;
-
             }
 
             if (Input.GetButtonDown("JumpP2"))
             {
                 Anim.SetTrigger("HeavyKick");
                 isHit = false;
-
             }
 
             if (Input.GetButtonDown("BlockP2"))
@@ -61,7 +57,6 @@ public class ActionsInput2 : ActionsInput
             { 
                 Anim.SetTrigger("HeavyKick");
                 isHit = false;
-
             }
         }
     }
@@ -74,7 +69,6 @@ public class ActionsInput2 : ActionsInput
             { 
                 Anim.SetTrigger("LightKick");
                 isHit = false;
-
             }  
         }
     }
