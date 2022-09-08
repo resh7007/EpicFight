@@ -149,6 +149,11 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         Anim.SetBool("Forward", false);
         Anim.SetBool("Backward", false);
     }
+
+    public virtual void SetInAttackState()
+    { 
+    }
+
     public void ResetTimeSlowMotion()
     {
          Time.timeScale = 1;

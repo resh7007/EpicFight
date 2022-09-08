@@ -41,42 +41,7 @@ public class Character2Input : CharacterInput
         }
         CheckIfBlock();
 
-    } 
-    // public void Lose()
-    // {
-    //     ResetTimeSlowMotion();
-    //     
-    //     transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
-    //     StartCoroutine(KnockedOut());
-    // }
-    // public void Win()
-    // {
-    //     ResetTimeSlowMotion();
-    //
-    //     StartCoroutine(VictoryCheer());
-    //     transform.GetChild(0).GetComponent<ActionsInput2>().enabled = false;
-    //     Anim.SetBool("Forward", false);
-    //     Anim.SetBool("Backward", false);
-    // }
-    // // IEnumerator VictoryCheer()
-    // {
-    //     transform.GetComponent<ICharacterInput>().enabled = false;
-    //
-    //
-    //     yield return new WaitForSeconds(1.0f);
-    //     Anim.SetTrigger("Victory");
-    // }
-    //
-    // IEnumerator KnockedOut()
-    // {
-    //
-    //     yield return new WaitForSeconds(.1f);
-    //     Anim.SetTrigger("KnockedOut");
-    //     transform.GetComponent<ICharacterInput>().enabled = false;
-    //     GetComponent<React>().enabled = false;
-    //     GetComponent<BoxCollider>().enabled = false;
-    //     
-    // }
+    }  
     protected override void JumpingCrouching()
     {
         if (Input.GetAxis("VerticalP2") > 0 && !IsJumping)

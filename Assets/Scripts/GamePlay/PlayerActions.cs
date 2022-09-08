@@ -11,8 +11,7 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float PunchSlideAmount =.5f;
     private GameObject Player1;
     private PlayerMovement playerMovement;
-    private AudioSource MyPlayer;
-    private ICharacterInput _characterInput;
+    private AudioSource MyPlayer; 
     [SerializeField] private float HeavyReactAmount = 3f;
     private bool HeavyReact = false;
     private Rigidbody rb;
@@ -25,10 +24,7 @@ public class PlayerActions : MonoBehaviour
         playerMovement =Player1.GetComponent<PlayerMovement>();
         rb = Player1.GetComponent<Rigidbody>();
     }
-    public void SetCharacterInput()
-    {
-        _characterInput =transform.root.GetComponent<ICharacterInput>();
-    }
+    
     private void Start()
     { 
         MyPlayer = GetComponent<AudioSource>();

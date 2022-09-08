@@ -79,30 +79,31 @@ public class GameController : MonoBehaviour
     void SetPlayer1Script()
     {
         Player1.AddComponent<CharacterInput>();
-        Player1.transform.GetChild(0).gameObject.AddComponent<ActionsInput>();
-        Player1.GetComponent<ScreenBounds>().SetCharacterInput();
-        Player1.transform.GetChild(0).gameObject.GetComponent<PlayerActions>().SetCharacterInput();
+        GameObject child =Player1.transform.GetChild(0).gameObject;
+        child.AddComponent<ActionsInput>();
+        Player1.GetComponent<ScreenBounds>().SetCharacterInput();  
     }
     void SetPlayer2Script()
     {
         Player2.AddComponent<Character2Input>();
-        Player2.transform.GetChild(0).gameObject.AddComponent<ActionsInput2>();
-        Player2.GetComponent<ScreenBounds>().SetCharacterInput();
-        Player2.transform.GetChild(0).gameObject.GetComponent<PlayerActions>().SetCharacterInput();
+        GameObject child =Player2.transform.GetChild(0).gameObject;
+
+        child.AddComponent<ActionsInput2>();
+        Player2.GetComponent<ScreenBounds>().SetCharacterInput();  
+
 
 
     }
     void SetAIScript()
     {
         Player2.AddComponent<CharacterInputAI>();
-        Player2.transform.GetChild(0).gameObject.AddComponent<ActionsInputAI>();
-        Player2.transform.GetChild(0).gameObject.GetComponent<ActionsInputAI>().SetCharacterInputAI(Player2.GetComponent<CharacterInputAI>());
+        GameObject child =Player2.transform.GetChild(0).gameObject;
+        child.AddComponent<ActionsInputAI>();
+        child.GetComponent<ActionsInputAI>().SetCharacterInputAI(Player2.GetComponent<CharacterInputAI>());
 
         Player2.GetComponent<ScreenBounds>().SetCharacterInput();
 
-        Player2.GetComponent<CharacterInputAI>().SetOpponent(Player1,Player2);
-        Player2.transform.GetChild(0).gameObject.GetComponent<PlayerActions>().SetCharacterInput();
-
+        Player2.GetComponent<CharacterInputAI>().SetOpponent(Player1,Player2);  
     }
 
     void SetMoveRestrictPlayer1()

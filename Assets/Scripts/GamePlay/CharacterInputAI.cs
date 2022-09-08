@@ -11,17 +11,21 @@ public class CharacterInputAI : CharacterInput
     private GameObject Opponent;
     private GameObject Player;
     private PlayerMovement playerMovement;
-
+    private React _react;
+    [SerializeField] private bool isInCrouch = false;
+    private IActionsInput actionsInput;
     protected override void Awake()
     {
         base.Awake();
         playerMovement = GetComponent<PlayerMovement>(); 
+        _react = GetComponent<React>(); 
     }
 
     public void SetOpponent(GameObject _opponent,GameObject _player)
     {
         Opponent = _opponent;
         Player = _player;
+        actionsInput = transform.GetChild(0).GetComponent<ActionsInputAI>();
     }
 
     protected override void Update()
@@ -94,42 +98,7 @@ public class CharacterInputAI : CharacterInput
        
         CheckIfBlock();
 
-    }
-    // public void Lose()
-    // {
-    //     ResetTimeSlowMotion();
-    //     
-    //     transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
-    //     StartCoroutine(KnockedOut());
-    // }
-    // public void Win()
-    // {
-    //     ResetTimeSlowMotion();
-    //
-    //     StartCoroutine(VictoryCheer());
-    //     transform.GetChild(0).GetComponent<ActionsInputAI>().enabled = false;
-    //     Anim.SetBool("Forward", false);
-    //     Anim.SetBool("Backward", false);
-    // }
-    //
-    // IEnumerator VictoryCheer()
-    // {
-    //     transform.GetComponent<CharacterInputAI>().enabled = false;
-    //     
-    //     yield return new WaitForSeconds(1.0f);
-    //     Anim.SetTrigger("Victory");
-    // }
-    //
-    // IEnumerator KnockedOut()
-    // {
-    //
-    //     yield return new WaitForSeconds(.1f);
-    //     Anim.SetTrigger("KnockedOut");
-    //     transform.GetComponent<CharacterInputAI>().enabled = false;
-    //     GetComponent<React>().enabled = false;
-    //     GetComponent<BoxCollider>().enabled = false;
-    //     
-    // }
+    } 
     protected override void JumpingCrouching()
     {
         if (Input.GetAxis("VerticalP2") > 0 && !IsJumping)
@@ -139,16 +108,16 @@ public class CharacterInputAI : CharacterInput
             StartCoroutine(JumpPause());
         }
 
-        if (Input.GetAxis("VerticalP2") < 0)
+        if (_react.GetDefend()==3)
         {
-            Anim.SetBool("Crouch", true);
-        }
+            Debug.Log("_react.GetDefend()="+_react.GetDefend());
+            actionsInput.SetInAttackState();
 
-        if (Input.GetAxis("VerticalP2") == 0)
-        {
-            Anim.SetBool("Crouch", false);
+            Anim.SetBool("Crouch", true);
+             _react.SetDefend(0); 
         }
-    }
+ 
+    } 
 
     IEnumerator ForwardFalse()
     {
@@ -160,5 +129,9 @@ public class CharacterInputAI : CharacterInput
     {
         return isInAttackRange;
 
+    }
+    public override void SetInAttackState()
+    {
+        isInCrouch = true; 
     }
 }

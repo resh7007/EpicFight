@@ -7,25 +7,26 @@ public class ActionsInputAI : ActionsInput
 {
     private CharacterInputAI characterInputAI;
    [SerializeField] private bool isInAttackState = false;
-   [SerializeField] private int AttackNumber = 0;
+   [SerializeField] private bool isInCrouch = false;
 
+   [SerializeField] private int AttackNumber = 0; 
     protected override void Update()
     {
         base.Update();
-        if (characterInputAI.GetIsInAttackRange() &&  !isInAttackState)
+        if (isInCrouch) return;
+        if(isInAttackState) return;
+        if (characterInputAI.GetIsInAttackRange())
         {
             isInAttackState = true;
             RandomAttack();
-           StartCoroutine(FinishAttack());
+            StartCoroutine(FinishAttack());
         }
     }
 
     IEnumerator FinishAttack()
     {
-
-        yield return new WaitForSeconds(3.5f);
-
-        isInAttackState = false;
+        yield return new WaitForSeconds(3.5f); 
+        isInAttackState = false; 
     }
 
     public void SetCharacterInputAI(CharacterInputAI _characterInputAI)
@@ -91,14 +92,18 @@ public class ActionsInputAI : ActionsInput
     protected override  void CrouchingAttack()
     {
         if (animatorStateInfo.IsTag("Crouching"))
-        {
-            if (Input.GetButtonDown("JumpP2"))
-            { 
+        { 
                 Anim.SetTrigger("HeavyKick");
                 isHit = false;
-
-            }
+                StartCoroutine(UnCrouch());
         }
+    }
+
+    IEnumerator UnCrouch()
+    {
+        yield return new WaitForSeconds(.4f);
+        Anim.SetBool("Crouch",false);
+        isInCrouch = false; 
     }
 
     protected override  void AerialMoves()
@@ -112,5 +117,10 @@ public class ActionsInputAI : ActionsInput
 
             }  
         }
+    }
+
+    public override void SetInAttackState()
+    {
+        isInCrouch = true; 
     }
 }

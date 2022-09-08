@@ -25,14 +25,14 @@ public class GameManager : MonoBehaviour
         if(called) return;
         
         
-        if (Save.Player1Health <= 0.9f )
+        if (Save.Player1Health <= 0f )
         {
             called = true;
             _characterInput1.Lose();
             _characterInput2.Win();
         }
 
-        if (Save.Player2Health <= 0.9f)
+        if (Save.Player2Health <= 0f)
         {
             called = true;
             _characterInput1.Win();

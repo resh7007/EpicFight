@@ -103,4 +103,7 @@ public class ActionsInput : MonoBehaviour,IActionsInput
         }
     }
 
+    public virtual void SetInAttackState()
+    { 
+    }
 }
