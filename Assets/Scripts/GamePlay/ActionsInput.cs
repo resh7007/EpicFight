@@ -23,6 +23,8 @@ public class ActionsInput : MonoBehaviour,IActionsInput
     }
     protected virtual void Update()
     { 
+        if(Save.TimeOut) return;
+        
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 
         StandingAttacks();

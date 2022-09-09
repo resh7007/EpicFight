@@ -31,12 +31,19 @@ public class CharacterInputAI : CharacterInput
     protected override void Update()
     {         
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
-        WalkSpeed = _playerActions.GetFlyingJump() ? JumpSpeed : MoveSpeed;
+        if (Save.TimeOut)
+        {
+            Anim.SetBool("Forward",false);
+            Anim.SetBool("Backward",false);
+        }
+        else
+        {
+            WalkSpeed = _playerActions.GetFlyingJump() ? JumpSpeed : MoveSpeed;
 
-        FindDistanceToOpponent();
-        WalkingLeftRight();
-        JumpingCrouching(); 
-
+            FindDistanceToOpponent();
+            WalkingLeftRight();
+            JumpingCrouching();
+        }
     }
 
     void FindDistanceToOpponent()

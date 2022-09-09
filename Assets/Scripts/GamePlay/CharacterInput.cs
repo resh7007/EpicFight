@@ -1,5 +1,6 @@
 using System.Collections; 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterInput : MonoBehaviour, ICharacterInput
 {
@@ -34,11 +35,22 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
 
     protected virtual void Update()
     {
-        WalkSpeed = _playerActions.GetFlyingJump() ? JumpSpeed : MoveSpeed;
         animatorStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 
-        WalkingLeftRight();
-        JumpingCrouching(); 
+        if (Save.TimeOut)
+        {
+            Anim.SetBool("Forward",false);
+            Anim.SetBool("Backward",false);
+        }
+        else
+        {
+            WalkSpeed = _playerActions.GetFlyingJump() ? JumpSpeed : MoveSpeed;
+
+            WalkingLeftRight();
+            JumpingCrouching(); 
+        }
+
+   
     }
 
     public bool GetIsInBlock()
@@ -148,8 +160,17 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         transform.GetChild(0).GetComponent<IActionsInput>().enabled = false;
         Anim.SetBool("Forward", false);
         Anim.SetBool("Backward", false);
+        StartCoroutine("reload");
     }
- 
+
+    IEnumerator reload()
+    {
+        yield return new WaitForSeconds(6.5f);
+        Save.Player1Health = 1;
+        Save.Player2Health = 1;
+
+        SceneManager.LoadScene("Level1");
+    }
 
     public void ResetTimeSlowMotion()
     {
