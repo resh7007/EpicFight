@@ -53,7 +53,7 @@ public class PlayerTrigger : MonoBehaviour
         {
                 if(!EmitHeavyKickFX) return;
                 heavyKickParticle.Play();
-                Time.timeScale = .3f;
+             //   Time.timeScale = .3f;
         }
         void ShowHeavyFistParticles()
         {

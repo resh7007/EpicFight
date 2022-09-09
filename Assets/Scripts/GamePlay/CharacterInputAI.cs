@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterInputAI : CharacterInput
 {
     private float OppDistance;
-    public float AttackDistance = 2.5f;
+    public float AttackDistance = 2.0f;
     [SerializeField]private bool MoveAI = true;
     private bool isInAttackRange = false;
     private GameObject Opponent;

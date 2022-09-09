@@ -149,10 +149,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         Anim.SetBool("Forward", false);
         Anim.SetBool("Backward", false);
     }
-
-    public virtual void SetInAttackState()
-    { 
-    }
+ 
 
     public void ResetTimeSlowMotion()
     {
@@ -168,12 +165,17 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
             _capsuleCollider.enabled = false;
             isInBlock = true;
         }
-        else
+        else  if (animatorStateInfo.IsTag("Motion"))
         {
             _boxCollider.enabled = true;
             _capsuleCollider.enabled = true;
             _rb.isKinematic = false; 
             isInBlock = false;
+        }
+        else if (animatorStateInfo.IsTag("Crouching") || animatorStateInfo.IsTag("Sweep"))
+        {
+            _boxCollider.enabled = false;
+
         }
     }
 

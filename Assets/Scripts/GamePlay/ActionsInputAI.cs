@@ -72,7 +72,7 @@ public class ActionsInputAI : ActionsInput
 
           
         }
- 
+  
     }
 
     protected override  void CrouchingAttack()
@@ -108,5 +108,10 @@ public class ActionsInputAI : ActionsInput
     public override void SetInAttackState()
     {
         isInCrouch = true; 
+    }
+
+    public void SetAttackNumber()
+    {
+        AttackNumber = 3;
     }
 }

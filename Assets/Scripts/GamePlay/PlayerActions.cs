@@ -9,7 +9,7 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] private float FlipHight=.3f; 
     [SerializeField] private bool HeavyMoving = false;
     [SerializeField] private float PunchSlideAmount =.5f;
-    private GameObject Player1;
+    private GameObject Player;
     private PlayerMovement playerMovement;
     private AudioSource MyPlayer; 
     [SerializeField] private float HeavyReactAmount = 3f;
@@ -20,9 +20,9 @@ public class PlayerActions : MonoBehaviour
 
     private void Awake()
     {
-        Player1 = transform.parent.gameObject;
-        playerMovement =Player1.GetComponent<PlayerMovement>();
-        rb = Player1.GetComponent<Rigidbody>();
+        Player = transform.parent.gameObject;
+        playerMovement =Player.GetComponent<PlayerMovement>();
+        rb = Player.GetComponent<Rigidbody>();
     }
     
     private void Start()
@@ -38,7 +38,7 @@ public class PlayerActions : MonoBehaviour
 
     public void JumpUp()
     {
-    Player1.transform.Translate(0,JumpSpeed,0); 
+    Player.transform.Translate(0,JumpSpeed,0); 
 
     }
   
@@ -46,7 +46,7 @@ public class PlayerActions : MonoBehaviour
     IEnumerator Forward()
     { 
         
-        Player1.transform.Translate(0,FlipHight,0);
+        Player.transform.Translate(0,FlipHight,0);
         FlyingJump = true;
         yield return new WaitForSeconds(.15f);  
  
@@ -54,7 +54,7 @@ public class PlayerActions : MonoBehaviour
     }
     IEnumerator Backward()
     {  
-        Player1.transform.Translate(0,FlipHight,0);
+        Player.transform.Translate(0,FlipHight,0);
         FlyingJump = true;
  
         yield return new WaitForSeconds(.15f); 
@@ -77,11 +77,11 @@ public class PlayerActions : MonoBehaviour
         if (!HeavyMoving) return;
         
         if(playerMovement.GetFacingRight())
-            Player1.transform.Translate(PunchSlideAmount*Time.deltaTime,0,0);
+            Player.transform.Translate(PunchSlideAmount*Time.deltaTime,0,0);
           
 
         if(playerMovement.GetFacingLeft())
-            Player1.transform.Translate(-PunchSlideAmount*Time.deltaTime,0,0); 
+            Player.transform.Translate(-PunchSlideAmount*Time.deltaTime,0,0); 
 
         
     }
@@ -98,19 +98,29 @@ public class PlayerActions : MonoBehaviour
         if (!HeavyReact) return;
         
         if(playerMovement.GetFacingRight())
-           Player1.transform.Translate(-HeavyReactAmount*Time.deltaTime,0,0); 
+           Player.transform.Translate(-HeavyReactAmount*Time.deltaTime,0,0); 
         if(playerMovement.GetFacingLeft())
-           Player1.transform.Translate(HeavyReactAmount*Time.deltaTime,0,0); 
-
+           Player.transform.Translate(HeavyReactAmount*Time.deltaTime,0,0); 
         
     }
     IEnumerator HeavySlide()
     {
         HeavyReact = true;
         yield return new WaitForSeconds(.05f);
-        HeavyReact = false;
+        HeavyReact = false; 
+        SetLightKick();
+
+
     }
-    
+
+    void SetLightKick()
+    {
+        if (TryGetComponent(out ActionsInputAI actionsInputAI))
+        {
+            actionsInputAI.SetAttackNumber();
+        }
+
+    }
     public void PunchWooshSound()
     {
         MyPlayer.clip = MyPlayer.GetComponent<AudioPlayer>().audioClip[0];
