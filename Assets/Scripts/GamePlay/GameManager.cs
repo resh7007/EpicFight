@@ -90,8 +90,15 @@ public class GameManager : MonoBehaviour
     { 
         WinText.gameObject.SetActive(true);
         WinText.text = $"{playerName} Wins";
-        if(TimeIsUp)
+        if (TimeIsUp)
+        {
+            yield return new WaitForSeconds(2f);
+
+            WinText.gameObject.SetActive(false);
+            yield return new WaitForSeconds(1f);
+
             StartCoroutine(ResetLevel());
+        }
         else
         {
             if (Save.Player1Health <= 0f)
@@ -114,9 +121,7 @@ public class GameManager : MonoBehaviour
 
             StartCoroutine(ResetLevel());
         }
-        yield return new WaitForSeconds(2f);
-
-        WinText.gameObject.SetActive(false);
+      
     }
 
     IEnumerator ResetLevel()
