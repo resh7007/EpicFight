@@ -19,6 +19,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     [SerializeField]protected float JumpSpeed =12f;
     protected float MoveSpeed;
     protected PlayerActions _playerActions;
+    
 
     protected virtual void Awake()
     {
@@ -58,19 +59,15 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         return isInBlock;
     } 
 
-    IEnumerator VictoryCheer()
-    {
-        transform.GetComponent<ICharacterInput>().enabled = false;
 
-        yield return new WaitForSeconds(1.0f);
-
-        Anim.SetTrigger("Victory");
-    }
 
     IEnumerator KnockedOut()
     {
+        Anim.SetBool("KnockOut",true);
+
         yield return new WaitForSeconds(.1f);
         Anim.SetTrigger("KnockedOut");
+
         transform.GetComponent<ICharacterInput>().enabled = false;
         GetComponent<React>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
@@ -152,24 +149,26 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         transform.GetChild(0).GetComponent<IActionsInput>().enabled = false;
         StartCoroutine(KnockedOut());
     }
-    public void Win()
+ 
+    public IEnumerator Win()
     {
         ResetTimeSlowMotion();
 
-        StartCoroutine(VictoryCheer());
         transform.GetChild(0).GetComponent<IActionsInput>().enabled = false;
         Anim.SetBool("Forward", false);
-        Anim.SetBool("Backward", false);
-        StartCoroutine("reload");
+        Anim.SetBool("Backward", false); 
+        StartCoroutine(VictoryCheer());
+        yield return VictoryCheer(); 
     }
 
-    IEnumerator reload()
+    IEnumerator VictoryCheer()
     {
-        yield return new WaitForSeconds(6.5f);
-        Save.Player1Health = 1;
-        Save.Player2Health = 1;
-
-        SceneManager.LoadScene("Level1");
+        transform.GetComponent<ICharacterInput>().enabled = false;
+        yield return new WaitForSeconds(1.0f);
+        transform.rotation = Quaternion.Euler(0, 90, 0);
+        Anim.SetTrigger("Victory");
+        yield return new WaitForSeconds(3.0f);
+        transform.rotation = Quaternion.Euler(0,0,0); 
     }
 
     public void ResetTimeSlowMotion()
@@ -223,5 +222,16 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         yield return new WaitForSeconds(1.0f);
         IsJumping = false;
     }
- 
+
+    public string GetPlayerName()
+    {
+        return _playerActions.character.PlayerName;
+    }
+
+   public void ResetPlayer()
+    {
+        Anim.SetBool("KnockOut",false); 
+        transform.GetChild(0).GetComponent<IActionsInput>().enabled = true;
+        GetComponent<ICharacterInput>().enabled = true;
+    }
 }

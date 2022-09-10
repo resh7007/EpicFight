@@ -67,15 +67,11 @@ public class PlayerMovement : MonoBehaviour
     {
         return FacingRight;
     }
- 
 
     void Update()
     {
         GetOpponentPosition(); 
     }
-
-
-
     void GetOpponentPosition()
     {
         OppPosition = Opponent.transform.position;

@@ -1,3 +1,5 @@
+ using System.Collections;
+
  interface ICharacterInput
  {
      public void SetWalkRight(bool value);
@@ -9,9 +11,10 @@
      public bool GetCanWalkRight();
      public bool GetCanWalkLeft();
      public void Lose();
-     public void Win();
+     public IEnumerator Win();
      public bool enabled {get; set;}
-
+     public string GetPlayerName();
+     public void ResetPlayer();
 
 
 

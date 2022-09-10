@@ -3,8 +3,9 @@ public static class Save
 {
     public static float Player1Health = 1f;
     public static float Player2Health = 1f;
-    public static float Player1Timer = 2.0f;
-    public static float Player2Timer = 2.0f;
+    public static float Player1Timer = 1.5f;
+    public static float Player2Timer = 1.5f; 
+
     public static bool TimeOut = false;
 
     public static void ReducePlayer1Health(float amount)

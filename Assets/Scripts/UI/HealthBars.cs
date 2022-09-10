@@ -13,18 +13,18 @@ public class HealthBars : MonoBehaviour
     [SerializeField] private Image Player2GreenHealthBar;
     [SerializeField] private Image Player2RedHealthBar;
     [SerializeField] private TextMeshProUGUI TimerText;
-    [SerializeField] private float LevelTime = 90;
+    [SerializeField] private float levelLasts = 90;
+     private float LevelTime;
 
     private void Start()
     {
         Save.TimeOut = true;
+        LevelTime = levelLasts;
     }
 
     void Update()
     {
-        if(Save.TimeOut) return;
-        
-        StartTimer();
+   
         Player1GreenHealthBar.fillAmount = Save.Player1Health;
         Player2GreenHealthBar.fillAmount = Save.Player2Health;
 
@@ -34,7 +34,7 @@ public class HealthBars : MonoBehaviour
         if(Save.Player2Timer <=0)
             if (Player2RedHealthBar.fillAmount > Save.Player2Health)
             {
-                Player2RedHealthBar.fillAmount -= 0.003f;
+                Player2RedHealthBar.fillAmount -= 0.01f;
             }
         
         if (Save.Player1Timer > 0)
@@ -43,8 +43,12 @@ public class HealthBars : MonoBehaviour
         if(Save.Player1Timer <=0)
             if (Player1RedHealthBar.fillAmount > Save.Player1Health)
             {
-                Player1RedHealthBar.fillAmount -= 0.003f;
+                Player1RedHealthBar.fillAmount -= 0.01f;
             }
+        
+        if(Save.TimeOut) return;
+        
+        StartTimer();
     }
 
     void StartTimer()
@@ -55,10 +59,21 @@ public class HealthBars : MonoBehaviour
         if (LevelTime <= 0.1f)
         {
             Save.TimeOut = true;
-            
+            FindObjectOfType<GameManager>().ChoseTheWinner();
+
         }
 
-        TimerText.text =Mathf.Round(LevelTime).ToString(CultureInfo.InvariantCulture);
+        TimerText.text = Mathf.Round(LevelTime).ToString(CultureInfo.InvariantCulture);
     }
 
+    public void ResetTimer()
+    {
+        LevelTime = levelLasts;
+    }
+    public void ResetHealthBar()
+    {
+        Player1RedHealthBar.fillAmount = 1;
+        Player2RedHealthBar.fillAmount = 1;
+    }
+    
 }
