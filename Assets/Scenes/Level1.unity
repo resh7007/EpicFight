@@ -292,6 +292,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7f729e6280080441f8ac949c901b8f16, type: 3}
   _audioClipFight: {fileID: 8300000, guid: c01dd050e496849ddb6a77436eb9ab41, type: 3}
   PauseTime: 1
+  _audioClipPlayerWins:
+  - {fileID: 8300000, guid: 405c4060f421640289073175ea8c01ac, type: 3}
+  - {fileID: 8300000, guid: 10395a5b16467480a8cab6ea5ba7d1a2, type: 3}
 --- !u!82 &146950929
 AudioSource:
   m_ObjectHideFlags: 0

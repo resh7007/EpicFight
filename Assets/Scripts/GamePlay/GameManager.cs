@@ -70,11 +70,14 @@ public class GameManager : MonoBehaviour
     void Player1Wins()
     {
         ShowWinText(_characterInput1.GetPlayerName());
+        _round.SetPlayerWinSounds(1);
 
     }
     void Player2Wins()
     {
         ShowWinText(_characterInput2.GetPlayerName());
+        _round.SetPlayerWinSounds(2);
+
     }
     void ShowWinText(string playerName)
     {
@@ -84,12 +87,9 @@ public class GameManager : MonoBehaviour
  
 
     IEnumerator NextRound(string playerName)
-    {
-       // yield return new WaitForSeconds(2f);
-
+    { 
         WinText.gameObject.SetActive(true);
         WinText.text = $"{playerName} Wins";
-  
         if(TimeIsUp)
             StartCoroutine(ResetLevel());
         else
@@ -130,8 +130,7 @@ public class GameManager : MonoBehaviour
             _healthBars.ResetTimer();
             _healthBars.ResetHealthBar();
             yield return new WaitForSeconds(2);
-
-            Save.TimeOut = false;
+ 
             TimeIsUp = false;
             called = false;
         }

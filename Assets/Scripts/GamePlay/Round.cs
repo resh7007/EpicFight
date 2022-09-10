@@ -11,6 +11,7 @@ public class Round : MonoBehaviour
     [SerializeField] private AudioClip[] _audioClipRounds;
     [SerializeField] private AudioClip _audioClipFight;
     [SerializeField] private float PauseTime = 1.0f;
+    [SerializeField] private AudioClip[] _audioClipPlayerWins; 
 
  
     void Start()
@@ -44,5 +45,16 @@ public class Round : MonoBehaviour
         Save.TimeOut = false;
 
     }
- 
+    public void SetPlayerWinSounds(int playerNum)
+    {
+        StartCoroutine(PlayerWinSound(playerNum));
+
+    }
+
+    IEnumerator PlayerWinSound(int playerNum)
+    {
+        yield return new WaitForSeconds(.4f); 
+        _audioSource.clip=_audioClipPlayerWins[playerNum-1];
+        _audioSource.Play(); 
+    }
 }
