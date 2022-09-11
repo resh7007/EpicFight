@@ -83,6 +83,14 @@ public class ActionsInput : MonoBehaviour,IActionsInput
             if (Input.GetButtonDown("Jump"))
             { 
                 Anim.SetTrigger("HeavyKick");
+                Debug.Log("Crouching HeavyKick");
+                isHit = false;
+            }
+            if (Input.GetButtonDown("Fire2"))
+            {
+                Debug.Log("Crouching HeavyPunch");
+
+                Anim.SetTrigger("HeavyPunch");
                 isHit = false;
             }
         }

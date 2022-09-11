@@ -80,11 +80,23 @@ public class ActionsInputAI : ActionsInput
     protected override  void CrouchingAttack()
     {
         if (animatorStateInfo.IsTag("Crouching"))
-        { 
-            Anim.SetTrigger("HeavyKick");
-            isHit = false;
+        {
+            int rand = Random.Range(0, 2);
+            if(rand==0)
+            {
+                Anim.SetTrigger("HeavyKick");
+                isHit = false;
+            }
+            else
+            {
+                Anim.SetTrigger("HeavyPunch");
+                isHit = false;
+            }
             StartCoroutine(UnCrouch());
         }
+      
+          
+        
     }
 
     IEnumerator UnCrouch()
@@ -102,7 +114,6 @@ public class ActionsInputAI : ActionsInput
             { 
                 Anim.SetTrigger("LightKick");
                 isHit = false;
-
             }  
         }
     }
