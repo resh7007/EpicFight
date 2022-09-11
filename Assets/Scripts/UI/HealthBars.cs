@@ -12,6 +12,11 @@ public class HealthBars : MonoBehaviour
     [SerializeField] private Image Player1RedHealthBar;
     [SerializeField] private Image Player2GreenHealthBar;
     [SerializeField] private Image Player2RedHealthBar;
+    [SerializeField] private Image P1Win1;
+    [SerializeField] private Image P1Win2;
+    [SerializeField] private Image P2Win1;
+    [SerializeField] private Image P2Win2;
+
     [SerializeField] private TextMeshProUGUI TimerText;
     [SerializeField] private float levelLasts = 90;
      private float LevelTime;
@@ -20,7 +25,11 @@ public class HealthBars : MonoBehaviour
     {
         Save.TimeOut = true;
         LevelTime = levelLasts;
+
     }
+
+
+    
 
     void Update()
     {
@@ -68,12 +77,34 @@ public class HealthBars : MonoBehaviour
 
     public void ResetTimer()
     {
-        LevelTime = levelLasts;
+        LevelTime = levelLasts; 
+
     }
     public void ResetHealthBar()
     {
         Player1RedHealthBar.fillAmount = 1;
         Player2RedHealthBar.fillAmount = 1;
+    }
+    public void ShowWinCounter()
+    { 
+        if (Save.Player1Wins == 1)
+        {
+            P1Win1.gameObject.SetActive(true);
+        }
+        else if (Save.Player1Wins > 1)
+        {
+            P1Win1.gameObject.SetActive(true);
+            P1Win2.gameObject.SetActive(true);
+        }
+        if (Save.Player2Wins == 1)
+        {
+            P2Win1.gameObject.SetActive(true);
+        }
+        else if (Save.Player2Wins > 1)
+        {
+            P2Win1.gameObject.SetActive(true);
+            P2Win2.gameObject.SetActive(true);
+        }
     }
     
 }

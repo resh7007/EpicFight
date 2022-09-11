@@ -89,9 +89,7 @@ public class GameController : MonoBehaviour
         GameObject child =Player2.transform.GetChild(0).gameObject;
 
         child.AddComponent<ActionsInput2>();
-        Player2.GetComponent<ScreenBounds>().SetCharacterInput();  
-
-
+        Player2.GetComponent<ScreenBounds>().SetCharacterInput();
 
     }
     void SetAIScript()

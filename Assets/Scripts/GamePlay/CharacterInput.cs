@@ -19,7 +19,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     [SerializeField]protected float JumpSpeed =12f;
     protected float MoveSpeed;
     protected PlayerActions _playerActions;
-    
+    protected PlayerMovement _playerMovement;
 
     protected virtual void Awake()
     {
@@ -28,6 +28,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         _boxCollider = GetComponent<BoxCollider>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
 
+        _playerMovement = GetComponent<PlayerMovement>();
         _playerActions = GetComponentInChildren<PlayerActions>();
         WalkSpeed = _playerActions.character.WalkSpeed;
         JumpSpeed = _playerActions.character.JumpSpeed;
@@ -93,7 +94,6 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     {
         return _canWalkLeft;
     }
-
 
     public void SetCanWalkRight(bool canWalk)
     {
@@ -165,7 +165,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     {
         transform.GetComponent<ICharacterInput>().enabled = false;
         yield return new WaitForSeconds(1.0f);
-        transform.rotation = Quaternion.Euler(0, 90, 0);
+        transform.rotation = Quaternion.Euler(0,  _playerMovement.dir*-90, 0);
         Anim.SetTrigger("Victory");
         yield return new WaitForSeconds(3.0f);
         transform.rotation = Quaternion.Euler(0,0,0); 

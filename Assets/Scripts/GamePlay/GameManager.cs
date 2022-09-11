@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text WinText; 
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
         _characterInput2= player2.GetComponent<ICharacterInput>();
 
         _healthBars = FindObjectOfType<HealthBars>();
+        player1.GetComponent<PlayerMovement>().dir=-1;
     }
 
     void Update()
@@ -39,7 +42,7 @@ public class GameManager : MonoBehaviour
         if (Save.Player1Health <= 0f )
         {
             called = true;
-            _characterInput1.Lose(); 
+            _characterInput1.Lose();  
 
             Player2Wins();
             Save.TimeOut = true;
@@ -48,17 +51,29 @@ public class GameManager : MonoBehaviour
         if (Save.Player2Health <= 0f)
         {
             called = true;
-            _characterInput2.Lose(); 
+            _characterInput2.Lose();  
 
             Player1Wins();
             Save.TimeOut = true;
 
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            Save.Player1Wins = 2;
+            SaveTotalWinnerAndLoadWinnerScene();
+        }
+        if (Input.GetKeyUp(KeyCode.B))
+        {
+            Save.Player2Wins = 2;
+            SaveTotalWinnerAndLoadWinnerScene();
         }
     }
 
     public void ChoseTheWinner()
     {
         TimeIsUp = true;
+
         if(Save.Player1Health < Save.Player2Health )
             Player2Wins();
         else
@@ -69,25 +84,30 @@ public class GameManager : MonoBehaviour
 
     void Player1Wins()
     {
-        ShowWinText(_characterInput1.GetPlayerName());
+        Save.Player1Wins++;
         _round.SetPlayerWinSounds(1);
+        ShowWinText(_characterInput1.GetPlayerName()); 
 
     }
     void Player2Wins()
     {
-        ShowWinText(_characterInput2.GetPlayerName());
+        Save.Player2Wins++; 
         _round.SetPlayerWinSounds(2);
+
+        ShowWinText(_characterInput2.GetPlayerName());
+
 
     }
     void ShowWinText(string playerName)
     {
-      
         StartCoroutine(NextRound(playerName));
     }
  
 
     IEnumerator NextRound(string playerName)
     { 
+        _healthBars.ShowWinCounter();
+
         WinText.gameObject.SetActive(true);
         WinText.text = $"{playerName} Wins";
         if (TimeIsUp)
@@ -105,17 +125,13 @@ public class GameManager : MonoBehaviour
             {
               yield return _characterInput2.Win(); 
               WinText.gameObject.SetActive(false);
-              _characterInput1.ResetPlayer();
-              _characterInput2.ResetPlayer();
 
             }
 
             if (Save.Player2Health <= 0f)
             {
                 yield return _characterInput1.Win(); 
-                WinText.gameObject.SetActive(false);
-                _characterInput1.ResetPlayer();
-                _characterInput2.ResetPlayer();
+                WinText.gameObject.SetActive(false); 
 
             } 
 
@@ -127,8 +143,11 @@ public class GameManager : MonoBehaviour
     IEnumerator ResetLevel()
     {
         RoundNum++;
-        if (RoundNum < 4)
+        if (Save.Player1Wins < 2 && Save.Player2Wins < 2)
         {
+            
+            _characterInput1.ResetPlayer();
+            _characterInput2.ResetPlayer();
             _round.SetRoundNumber(RoundNum);
             Save.Player1Health = 1;
             Save.Player2Health = 1;
@@ -141,9 +160,19 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Game is over");
+
+            SaveTotalWinnerAndLoadWinnerScene();             
         }
     }
  
 
+ void SaveTotalWinnerAndLoadWinnerScene()
+ {
+     if (Save.Player1Wins > 1)
+         Save.TotalLevelWinnerID = 1;
+     else if (Save.Player2Wins > 1)
+         Save.TotalLevelWinnerID = 2;
+
+     SceneManager.LoadScene("Level1Winner");
+ }
 }

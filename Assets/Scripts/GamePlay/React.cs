@@ -7,7 +7,8 @@ public class React : MonoBehaviour
     private AudioSource MyPlayer;
     private ICharacterInput _characterInput;
     private void Awake()=> playerMovement = GetComponent<PlayerMovement>();
-    [SerializeField]private int defend = 0; 
+    [SerializeField]private int defend = 0;
+    public bool isStaticModel;
     private void Start()
     {
         Anim = playerMovement.GetAnim();
@@ -17,6 +18,8 @@ public class React : MonoBehaviour
  
     private void OnTriggerEnter(Collider other)
     {
+        if(isStaticModel) return;
+        
         if (_characterInput.GetIsInBlock())
             return;
 
