@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/MaskedPurpleGuy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/MaskedPurpleGuy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Mouse.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Mouse.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInputAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInputAI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,7 @@
       <workItem from="1662445748177" duration="9229000" />
       <workItem from="1662547769836" duration="10427000" />
       <workItem from="1662618793726" duration="10508000" />
-      <workItem from="1662778986296" duration="11756000" />
+      <workItem from="1662778986296" duration="12139000" />
     </task>
     <servers />
   </component>

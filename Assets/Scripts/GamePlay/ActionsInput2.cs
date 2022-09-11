@@ -54,17 +54,13 @@ public class ActionsInput2 : ActionsInput
         if (animatorStateInfo.IsTag("Crouching"))
         {
             if (Input.GetButtonDown("JumpP2"))
-            { 
-                Debug.Log("Crouching HeavyKick");
-
+            {  
                 Anim.SetTrigger("HeavyKick");
                 isHit = false;
             }
        
             if (Input.GetButtonDown("Fire2P2"))
-            {
-                Debug.Log("Crouching HeavyPunch");
-
+            { 
                 Anim.SetTrigger("HeavyPunch");
                 isHit = false;
             }
