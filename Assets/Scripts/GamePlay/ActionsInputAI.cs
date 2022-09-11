@@ -9,7 +9,9 @@ public class ActionsInputAI : ActionsInput
    [SerializeField] private bool isInAttackState = false;
    [SerializeField] private bool isInCrouch = false;
 
-   [SerializeField] private int AttackNumber = 0; 
+   [SerializeField] private int AttackNumber = 0;
+   [Range(0,3)]
+   [SerializeField] private int AIDifficulty = 0;
     protected override void Update()
     {
         base.Update();
@@ -25,7 +27,7 @@ public class ActionsInputAI : ActionsInput
 
     IEnumerator FinishAttack()
     {
-        yield return new WaitForSeconds(3.5f); 
+        yield return new WaitForSeconds(3.5f-AIDifficulty); 
         isInAttackState = false; 
     }
 

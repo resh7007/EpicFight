@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab3f870664a544999550abec95f5a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 0.9
+  DamageAmount: 0.1
   EmitHeavyKickFX: 1
   EmitFistFX: 0
   EmitLightKickFX: 0

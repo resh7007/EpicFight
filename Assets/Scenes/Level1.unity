@@ -1246,7 +1246,7 @@ MonoBehaviour:
   SpawnPosPlayer2: {fileID: 1467981441}
   Player1Prefab: {fileID: 4825082994890404532, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
   Player2Prefab: {fileID: 5016556284008855535, guid: 2698129f97857473287271930343fe76, type: 3}
-  isTwoPlayerGame: 1
+  isTwoPlayerGame: 0
 --- !u!114 &885632526
 MonoBehaviour:
   m_ObjectHideFlags: 0
