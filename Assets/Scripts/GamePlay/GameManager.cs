@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text WinText; 
+    [SerializeField] private TMP_Text WinText;
+    [SerializeField] private TMP_Text player1Name; 
+    [SerializeField] private TMP_Text player2Name; 
+
     private GameObject player1;
     private GameObject player2;
     private ICharacterInput _characterInput1;
@@ -17,6 +20,10 @@ public class GameManager : MonoBehaviour
     private bool TimeIsUp = false;
     private Round _round;
     private int RoundNum=1;
+    private PlayerActions Player1Actions;
+    private PlayerActions Player2Actions;
+
+    
     private void Awake()
     {
         _round = FindObjectOfType<Round>();
@@ -32,6 +39,14 @@ public class GameManager : MonoBehaviour
 
         _healthBars = FindObjectOfType<HealthBars>();
         player1.GetComponent<PlayerMovement>().dir=-1;
+
+        Player1Actions = _player1.GetComponentInChildren<PlayerActions>();
+        Player2Actions = _player2.GetComponentInChildren<PlayerActions>();
+
+        player1Name.text = Player1Actions.character.PlayerName;
+        player2Name.text = Player2Actions.character.PlayerName;
+
+
     }
 
     void Update()
@@ -58,16 +73,16 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            Save.Player1Wins = 2;
-            SaveTotalWinnerAndLoadWinnerScene();
-        }
-        if (Input.GetKeyUp(KeyCode.B))
-        {
-            Save.Player2Wins = 2;
-            SaveTotalWinnerAndLoadWinnerScene();
-        }
+        // if (Input.GetKeyUp(KeyCode.A))
+        // {
+        //     Save.Player1Wins = 2;
+        //     SaveTotalWinnerAndLoadWinnerScene();
+        // }
+        // if (Input.GetKeyUp(KeyCode.B))
+        // {
+        //     Save.Player2Wins = 2;
+        //     SaveTotalWinnerAndLoadWinnerScene();
+        // }
     }
 
     public void ChoseTheWinner()
@@ -164,15 +179,21 @@ public class GameManager : MonoBehaviour
             SaveTotalWinnerAndLoadWinnerScene();             
         }
     }
- 
 
- void SaveTotalWinnerAndLoadWinnerScene()
- {
-     if (Save.Player1Wins > 1)
-         Save.TotalLevelWinnerID = 1;
-     else if (Save.Player2Wins > 1)
-         Save.TotalLevelWinnerID = 2;
 
-     SceneManager.LoadScene("Level1Winner");
+    void SaveTotalWinnerAndLoadWinnerScene()
+    {
+        if (Save.Player1Wins > 1)
+        {
+            Save.TotalLevelWinnerID = Player1Actions.character.Id; 
+
+        }
+        else if (Save.Player2Wins > 1)
+        {
+            Save.TotalLevelWinnerID = Player2Actions.character.Id; 
+
+        }
+
+        SceneManager.LoadScene("Level1Winner");
  }
 }

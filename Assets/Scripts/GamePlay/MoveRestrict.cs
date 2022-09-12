@@ -8,8 +8,7 @@ public class MoveRestrict : MonoBehaviour
     private ICharacterInput characterInput;
     private string opponentTag1;
     private string opponentTag2;
-
-
+ 
     public void SetPlayer(GameObject player)
     { 
         characterInput=player.GetComponent<ICharacterInput>();

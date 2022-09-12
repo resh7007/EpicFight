@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PurpleMaskedGuy
   m_EditorClassIdentifier: 
   PlayerName: Purple Mask
-  JumpSpeed: 12
+  JumpSpeed: 9
   WalkSpeed: 3
+  Id: 1

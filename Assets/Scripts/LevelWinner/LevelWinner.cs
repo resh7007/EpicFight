@@ -14,13 +14,23 @@ public class LevelWinner : MonoBehaviour
 
     void SpawnPlayerModel()
     {
-        int playerId = Save.TotalLevelWinnerID - 1;
+        int playerId = Save.TotalLevelWinnerID;
         if (playerId == 0)
         {
             Vector3 pos = spawnPos.transform.position;
             pos.y += .66f;
             pos.z -= 1.5f;
             spawnPos.transform.position = pos;
+        }
+
+        if (playerId == 2)
+        {
+            Vector3 pos = spawnPos.transform.position;
+            pos.x = 3.528f;
+            pos.y = 0.584f;
+            pos.z = -7.549f;
+            spawnPos.transform.position = pos;
+           
         }
 
         player = Instantiate(_players.playerPrefabs[playerId], spawnPos.transform.position, Quaternion.identity);

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -56,7 +57,7 @@ public class GameController : MonoBehaviour
         SetPlayer1Script();
         SetAIScript();
     }
-    
+     
     void SetMoveRestrictPlayers()
     {
         SetMoveRestrictPlayer1();
@@ -66,12 +67,12 @@ public class GameController : MonoBehaviour
 
     void SpawnPlayer1()
     {
-        Player1 = Instantiate(Player2Prefab, SpawnPosPlayer1.transform.position, Quaternion.identity);
+        Player1 = Instantiate(Player1Prefab, SpawnPosPlayer1.transform.position, Quaternion.identity);
         Player1.tag = "player1";
     }
     void SpawnPlayer2()
     {
-        Player2 = Instantiate(Player1Prefab, SpawnPosPlayer2.transform.position, Quaternion.identity);
+        Player2 = Instantiate(Player2Prefab, SpawnPosPlayer2.transform.position, Quaternion.identity);
         Player2.tag = "player2";
     }
  
@@ -81,7 +82,9 @@ public class GameController : MonoBehaviour
         Player1.AddComponent<CharacterInput>();
         GameObject child =Player1.transform.GetChild(0).gameObject;
         child.AddComponent<ActionsInput>();
-        Player1.GetComponent<ScreenBounds>().SetCharacterInput();  
+        Player1.GetComponent<ScreenBounds>().SetCharacterInput();
+        Player1.transform.Find("SpaceDetector").tag="SpaceDetector1";
+        
     }
     void SetPlayer2Script()
     {
@@ -90,6 +93,7 @@ public class GameController : MonoBehaviour
 
         child.AddComponent<ActionsInput2>();
         Player2.GetComponent<ScreenBounds>().SetCharacterInput();
+        Player2.transform.Find("SpaceDetector").tag="SpaceDetector2";
 
     }
     void SetAIScript()

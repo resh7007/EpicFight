@@ -619,7 +619,7 @@ MonoBehaviour:
   P2Win1: {fileID: 1842774008}
   P2Win2: {fileID: 834364470}
   TimerText: {fileID: 1287890852}
-  levelLasts: 90
+  levelLasts: 5
 --- !u!1 &425097167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,7 +1245,7 @@ MonoBehaviour:
   SpawnPosPlayer1: {fileID: 425097168}
   SpawnPosPlayer2: {fileID: 1467981441}
   Player1Prefab: {fileID: 4825082994890404532, guid: 03d8cc511d12b42838d61317043c9de9, type: 3}
-  Player2Prefab: {fileID: 5016556284008855535, guid: 2698129f97857473287271930343fe76, type: 3}
+  Player2Prefab: {fileID: 3347639275675388418, guid: 44f986f97936c4c8badf03ad65b4063a, type: 3}
   isTwoPlayerGame: 1
 --- !u!114 &885632526
 MonoBehaviour:
@@ -1260,6 +1260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinText: {fileID: 1073719723}
+  player1Name: {fileID: 482843881}
+  player2Name: {fileID: 1906158467}
 --- !u!1 &890294746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,7 +1835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -12.477, y: -508}
+  m_AnchoredPosition: {x: -12.477, y: -292}
   m_SizeDelta: {x: 1865, y: 518.0887}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073719723
@@ -1883,8 +1885,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 213.4
-  m_fontSizeBase: 213.4
+  m_fontSize: 197.28
+  m_fontSizeBase: 197.28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1951,7 +1953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1234230038
 RectTransform:
   m_ObjectHideFlags: 0

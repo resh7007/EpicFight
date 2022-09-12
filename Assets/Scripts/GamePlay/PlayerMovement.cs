@@ -20,8 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
-        PlayerGO = transform.GetChild(0).gameObject;
-        
+        PlayerGO = transform.GetChild(0).gameObject; 
     }
 
     public MoveRestrict GetMoveRestrict()
@@ -118,4 +117,6 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+
+ 
 }

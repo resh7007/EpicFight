@@ -9,11 +9,17 @@ public class React : MonoBehaviour
     private void Awake()=> playerMovement = GetComponent<PlayerMovement>();
     [SerializeField]private int defend = 0;
     public bool isStaticModel;
+    public GameObject[] ReactColliders;
     private void Start()
     {
         Anim = playerMovement.GetAnim();
         MyPlayer = GetComponent<AudioSource>(); 
         _characterInput = GetComponent<ICharacterInput>();
+
+        foreach (var reactCollider in ReactColliders)
+        {
+            reactCollider.tag = transform.root.tag;
+        }
     }
  
     private void OnTriggerEnter(Collider other)

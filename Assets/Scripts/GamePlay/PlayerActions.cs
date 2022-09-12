@@ -6,7 +6,7 @@ public class PlayerActions : MonoBehaviour
 {
 
     [SerializeField] private float JumpSpeed=2;
-    [SerializeField] private float FlipHight=.3f; 
+    [SerializeField] private float FlipHight=1.77f; 
     [SerializeField] private bool HeavyMoving = false;
     [SerializeField] private float PunchSlideAmount =.5f;
     private GameObject Player;
