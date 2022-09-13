@@ -6,37 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/Jump Attack Back(1).anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/Jump Attack Back(1).anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/Jump Attack Forward(1).anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Back/Jump Attack Forward(1).anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Jump Attack Back.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Jump Attack Back.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Jump Attack Forward.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Jump Attack Forward.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Materials/Ch43_1001_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/Forward/Materials/Ch43_1001_Diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/MaskedPurpleGuy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/MaskedPurpleGuy/MaskedPurpleGuy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Back/Running Forward Flip (1).anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Back/Running Forward Flip (1).anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Running Backward Flip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Running Backward Flip.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Running Forward Flip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Attack/Forward/Running Forward Flip.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Mouse.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Mouse.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasePlayer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasePlayer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/JumpActivator.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/JumpActivator.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OpponentDetector.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/OpponentDetector.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Character.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Player Prefabs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Player Prefabs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PurpleMaskedGuy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PurpleMaskedGuy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/JumpActivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/JumpActivator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/MoveRestrict.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/MoveRestrict.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/React.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/React.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelWinner/LevelWinner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelWinner/LevelWinner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +128,7 @@
       <workItem from="1662445748177" duration="9229000" />
       <workItem from="1662547769836" duration="10427000" />
       <workItem from="1662618793726" duration="10508000" />
-      <workItem from="1662778986296" duration="19957000" />
+      <workItem from="1662778986296" duration="20716000" />
     </task>
     <servers />
   </component>

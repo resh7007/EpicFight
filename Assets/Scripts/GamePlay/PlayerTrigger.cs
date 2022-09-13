@@ -33,7 +33,7 @@ public class PlayerTrigger : MonoBehaviour
 
         private void Update()
         { 
-                _collider.enabled = !_actionsInput.GetHit(); 
+           //     _collider.enabled = !_actionsInput.GetHit(); 
            
         }
 
