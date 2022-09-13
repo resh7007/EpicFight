@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMaskedPurpleGuy Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerMouse.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_eyelashes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_eyelashes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/BasePlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/construct player/BasePlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Player Prefabs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Player Prefabs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,7 @@
       <workItem from="1662445748177" duration="9229000" />
       <workItem from="1662547769836" duration="10427000" />
       <workItem from="1662618793726" duration="10508000" />
-      <workItem from="1662778986296" duration="20716000" />
+      <workItem from="1662778986296" duration="21466000" />
     </task>
     <servers />
   </component>
