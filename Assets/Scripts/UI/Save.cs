@@ -9,6 +9,8 @@ public static class Save
     public static int Player1Wins = 0;
     public static int Player2Wins = 0;
     public static int TotalLevelWinnerID=0; //Ids are stored in scriptable object
+    public static int chosenPlayer1ID;
+    public static int chosenPlayer2ID;
 
     public static void ReducePlayer1Health(float amount)
     {

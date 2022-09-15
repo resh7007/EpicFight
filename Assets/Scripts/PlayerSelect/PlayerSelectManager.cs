@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerSelectManager : MonoBehaviour
@@ -30,6 +32,9 @@ public class PlayerSelectManager : MonoBehaviour
 
     [SerializeField] private GameObject particle1;
     [SerializeField] private GameObject particle2;
+    [SerializeField] private bool isPlayer1Chosen;
+    [SerializeField] private bool isPlayer2Chosen;
+
     private void Start()
     {
         btns = _iconsManager.GetSelectionButtons();
@@ -73,6 +78,9 @@ public class PlayerSelectManager : MonoBehaviour
             SelectionSquare1.transform.GetChild(0).gameObject.SetActive(true);
             model1.transform.GetChild(0).GetComponent<Animator>().SetTrigger("HeavyPunch");
             particle1.SetActive(false);
+            isPlayer1Chosen = true;
+            StartCoroutine(LoadTheGameLevel());
+
         }    
     }
     void Player2Inputs()
@@ -106,6 +114,8 @@ public class PlayerSelectManager : MonoBehaviour
             SelectionSquare2.transform.GetChild(0).gameObject.SetActive(true);
             model2.transform.GetChild(0).GetComponent<Animator>().SetTrigger("HeavyPunch");
             particle2.SetActive(false);
+            isPlayer2Chosen = true;
+            StartCoroutine(LoadTheGameLevel());
         }    
     }
     void RemoveSelectedP1()
@@ -115,6 +125,9 @@ public class PlayerSelectManager : MonoBehaviour
         particle1.SetActive(true);
         SelectionSquare1.transform.GetChild(0).gameObject.SetActive(false);
         
+        isPlayer1Chosen = false;
+
+        
     }
     void RemoveSelectedP2()
     {
@@ -122,7 +135,8 @@ public class PlayerSelectManager : MonoBehaviour
         
         particle2.SetActive(true);
         SelectionSquare2.transform.GetChild(0).gameObject.SetActive(false);
-        
+        isPlayer2Chosen = false;
+
     }
     public void SelectPlayer1(GameObject button)
     {
@@ -166,13 +180,23 @@ public class PlayerSelectManager : MonoBehaviour
         model2 = Instantiate(prefab, spawnPos2.transform.position, Quaternion.identity);
         playerName2.text = prefab.transform.GetChild(0).GetComponent<PlayerActions>().character.PlayerName;
         model2.GetComponent<React>().isStaticModel = true;
-        model2.GetComponent<ModeState>().ModelStaticState(90); 
-
+        model2.GetComponent<ModeState>().ModelStaticState(90);
 
     }
 
     private int GetButtonId(GameObject button)
     {
        return button.GetComponent<PlayerSelectButton>().buttonId;
+    }
+
+    IEnumerator LoadTheGameLevel()
+    {
+        yield return new WaitForSeconds(2.7f);
+        Save.chosenPlayer1ID =  model1.transform.GetChild(0).GetComponent<PlayerActions>().character.Id;
+        Save.chosenPlayer2ID =  model2.transform.GetChild(0).GetComponent<PlayerActions>().character.Id;
+
+        if(isPlayer1Chosen && isPlayer2Chosen)
+             SceneManager.LoadScene("Level1");
+        
     }
 }

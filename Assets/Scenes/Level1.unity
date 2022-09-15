@@ -619,7 +619,7 @@ MonoBehaviour:
   P2Win1: {fileID: 1842774008}
   P2Win2: {fileID: 834364470}
   TimerText: {fileID: 1287890852}
-  levelLasts: 1
+  levelLasts: 90
 --- !u!1 &425097167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1247,7 @@ MonoBehaviour:
   Player1Prefab: {fileID: 5016556284008855535, guid: 2698129f97857473287271930343fe76, type: 3}
   Player2Prefab: {fileID: 7306794375552198779, guid: f7aa587fbd8a8464582101af94976c2d, type: 3}
   isTwoPlayerGame: 1
+  playerPrefabs: {fileID: 11400000, guid: aac9b6baffe5f4f4da6f08b838508db5, type: 2}
 --- !u!114 &885632526
 MonoBehaviour:
   m_ObjectHideFlags: 0

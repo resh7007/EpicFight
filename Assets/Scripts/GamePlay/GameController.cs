@@ -11,10 +11,11 @@ public class GameController : MonoBehaviour
     private GameObject Player2;
     public bool isTwoPlayerGame;
     private PlayerMovement p1PlayerMovement;
-    private PlayerMovement p2PlayerMovement; 
-
+    private PlayerMovement p2PlayerMovement;
+    public PlayerPrefabs playerPrefabs;
     void Awake()
     {
+        GetPlayerPrefabs();
         SpawnPlayers();
         if (isTwoPlayerGame)
         {
@@ -35,6 +36,12 @@ public class GameController : MonoBehaviour
 
     }
 
+    void GetPlayerPrefabs()
+    {
+        Player1Prefab = playerPrefabs.playerPrefabs[Save.chosenPlayer1ID];
+        Player2Prefab = playerPrefabs.playerPrefabs[Save.chosenPlayer2ID];
+
+    }
     void SpawnPlayers()
     {
         SpawnPlayer1();

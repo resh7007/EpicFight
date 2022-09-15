@@ -109,7 +109,7 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
         if (animatorStateInfo.IsTag("Motion"))
         {
             ResetTimeSlowMotion();
-            if (Input.GetAxis("Horizontal")>0)
+                if (Input.GetAxis("Horizontal")>0)
             { 
                 if (!GetCanWalkRight()) return;
                 if (walkRight)
