@@ -7,6 +7,7 @@ public class ActionsInput : MonoBehaviour,IActionsInput
     protected AnimatorStateInfo animatorStateInfo;
     protected Animator Anim;
     protected bool isHit = false;
+    protected SuperPowerManager SuperPowerManager;
 
     public void SetHit(bool flag)
     {
@@ -18,8 +19,8 @@ public class ActionsInput : MonoBehaviour,IActionsInput
     }
     protected void Start()
     {
-        Anim = transform.GetComponent<Animator>(); 
-
+        Anim = transform.GetComponent<Animator>();
+        SuperPowerManager = transform.root.GetComponent<SuperPowerManager>();
     }
     protected virtual void Update()
     { 
@@ -63,6 +64,13 @@ public class ActionsInput : MonoBehaviour,IActionsInput
             if (Input.GetButtonDown("Block"))
             {
                 Anim.SetTrigger("BlockOn");
+            }
+            
+            if (Input.GetButtonDown("SuperPower1"))
+            {
+                Anim.SetTrigger("SuperPower1");
+                SuperPowerManager.SpawnSuperPower();
+                isHit = false;
             }
         }
 

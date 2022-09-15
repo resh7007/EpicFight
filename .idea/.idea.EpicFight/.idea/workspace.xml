@@ -6,11 +6,68 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1e8db9-1233-40e4-b1f6-44012490f0de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EpicFight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_body1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_eyelashes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Forward/Materials/Ch06_eyelashes.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/BasePlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/construct player/BasePlayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Fairy/Back/LowPunching(1).anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Fairy/Back/LowPunching(1).anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Fairy/Forward/Fairy.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Fairy/Forward/Fairy.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Fairy/Forward/LowPunching.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Fairy/Forward/LowPunching.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Gipsy girl/Gipsy girl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Gipsy girl/Gipsy girl.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Hip hopper.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Hip hopper/Hip hopper.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/Mouse/Mouse.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/Mouse/Mouse.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX/Materials/Animated/CFX_Anim_Triangle2_AlphaBlendedPremult.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX/Materials/Animated/CFX_Anim_Triangle2_AlphaBlendedPremult.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX/Materials/Stretched/CFX_SmallSpike_AddSoft.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/Cartoon FX/Materials/Stretched/CFX_SmallSpike_AddSoft.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fairy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fairy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GipsyGirl.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GipsyGirl.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hip hopper.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hip hopper.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MaskedPurpleGuy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MaskedPurpleGuy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mouse.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mouse.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/HeavyFistParticle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/HeavyFistParticle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/HeavyKickParticle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/HeavyKickParticle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/LightKickParticle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/LightKickParticle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/BasePlayer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/BasePlayer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/JumpActivator.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/JumpActivator.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/OpponentDetector.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/OpponentDetector.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFistHeavyPunch.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFistHeavyPunch.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFistLightPunch.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFistLightPunch.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFootHeavyKick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFootHeavyKick.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFootLightKick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/LeftFootLightKick.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFistHeavyPunch.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFistHeavyPunch.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFistLightPunch.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFistLightPunch.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFoorHeavyKick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFoorHeavyKick.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFoorLightKick.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/construct player/punch colliders/RightFoorLightKick.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Gipsy girl.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Gipsy girl.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Player Prefabs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Player Prefabs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/CharacterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/CharacterInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GamePlay/React.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GamePlay/React.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelWinner/LevelWinner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelWinner/LevelWinner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +94,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/ActionsInputAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.14/Editor/VisualStudioInstallation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.14/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/GUI/Views/EditModeTestListGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/AudioPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/Round.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Runtime/PostProcessVolume.cs" root0="SKIP_HIGHLIGHTING" />
@@ -44,11 +102,13 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.14/Editor/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.15.15/Tests/Editor/Collaborate/Models/TestHistoryModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Shortcuts.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelWinner/ModeState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/CanvasUpdateRegistry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/treeview/IPropertyKeyDataSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/treeview/Drawers/InfiniteTrackDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEngine.TestRunner/NUnitExtensions/Commands/EnumerableSetUpTearDownCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/CommandLineTest/Executer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.14/Editor/UsageUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/RequireApiProfileAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/Api/ExecutionSettings.cs" root0="SKIP_HIGHLIGHTING" />
@@ -126,7 +186,7 @@
       <workItem from="1662445748177" duration="9229000" />
       <workItem from="1662547769836" duration="10427000" />
       <workItem from="1662618793726" duration="10508000" />
-      <workItem from="1662778986296" duration="21466000" />
+      <workItem from="1662778986296" duration="38075000" />
     </task>
     <servers />
   </component>

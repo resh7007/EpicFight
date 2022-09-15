@@ -123,6 +123,7 @@ public class PlayerActions : MonoBehaviour
     }
     public void PunchWooshSound()
     {
+        if(MyPlayer==null) return;
         MyPlayer.clip = MyPlayer.GetComponent<AudioPlayer>().audioClip[0];
         MyPlayer.Play();
     }

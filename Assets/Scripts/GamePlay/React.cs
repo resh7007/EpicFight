@@ -1,18 +1,22 @@
 using UnityEngine;
 
 public class React : MonoBehaviour
-{ 
+{
     private PlayerMovement playerMovement;
     private Animator Anim;
     private AudioSource MyPlayer;
     private ICharacterInput _characterInput;
-    private void Awake()=> playerMovement = GetComponent<PlayerMovement>();
     [SerializeField]private int defend = 0;
     public bool isStaticModel;
     public GameObject[] ReactColliders;
+  
+
     private void Start()
     {
+        playerMovement = GetComponent<PlayerMovement>();
+
         Anim = playerMovement.GetAnim();
+        
         MyPlayer = GetComponent<AudioSource>(); 
         _characterInput = GetComponent<ICharacterInput>();
 
@@ -21,7 +25,8 @@ public class React : MonoBehaviour
             reactCollider.tag = transform.root.tag;
         }
     }
- 
+
+
     private void OnTriggerEnter(Collider other)
     {
         if(isStaticModel) return;
@@ -31,7 +36,7 @@ public class React : MonoBehaviour
 
         if (other.gameObject.CompareTag("KickLight"))
         {
-            Anim.SetTrigger("HeadReact");
+            Anim.SetTrigger("LegReact");
             MyPlayer.clip = MyPlayer.GetComponent<AudioPlayer>().audioClip[0];
             MyPlayer.Play(); 
             defend = Random.Range(0, 5); 

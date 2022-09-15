@@ -35,21 +35,9 @@ public class LevelWinner : MonoBehaviour
 
         player = Instantiate(_players.playerPrefabs[playerId], spawnPos.transform.position, Quaternion.identity);
         player.GetComponent<React>().isStaticModel = true;
-        player.GetComponent<React>().enabled = false;
-
-        player.GetComponent<BoxCollider>().isTrigger = false;
-        player.GetComponent<Rigidbody>().isKinematic = true;
-        player.GetComponent<BoxCollider>().enabled = false;
-        player.GetComponent<CapsuleCollider>().enabled = false;
-        MoveRestrict go= FindObjectOfType<MoveRestrict>();
-        go.gameObject.SetActive(false);
-        go.GetComponent<BoxCollider>().enabled = false;
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<ScreenBounds>().enabled = false;
-        player.transform.GetChild(0).GetComponent<PlayerActions>().enabled = false;
-        player.transform.rotation = Quaternion.Euler(0,90,0);
+        player.GetComponent<ModeState>().ModelStaticState(90); 
     }
-
+ 
     IEnumerator VictoryAnimation()
     {
         yield return new WaitForSeconds(1);

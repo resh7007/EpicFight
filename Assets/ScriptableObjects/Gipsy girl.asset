@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934c6b64492fe4f79b9e63844eab0223, type: 3}
   m_Name: Gipsy girl
   m_EditorClassIdentifier: 
+  Id: 2
   PlayerName: Gipsy girl
   JumpSpeed: 8
-  WalkSpeed: 2
-  Id: 2
+  WalkSpeed: 3

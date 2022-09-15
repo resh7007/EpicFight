@@ -118,5 +118,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public string GetOpponentTag()
+    {
+        return Opponent.tag;
+    }
+
  
 }

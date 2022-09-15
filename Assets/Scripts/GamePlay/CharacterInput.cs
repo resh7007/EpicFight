@@ -20,7 +20,6 @@ public class CharacterInput : MonoBehaviour, ICharacterInput
     protected float MoveSpeed;
     protected PlayerActions _playerActions;
     protected PlayerMovement _playerMovement;
-
     protected virtual void Awake()
     {
         Anim = GetComponentInChildren<Animator>();
